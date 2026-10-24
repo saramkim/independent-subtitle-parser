@@ -24,7 +24,8 @@ The test suite verifies every recorded byte. Raw upstream files are unchanged.
   declares UTF-16LE by BOM; the other 23 decode as strict UTF-8.
 
 These are 24 translations/variants of **one film**, not 24 independent production
-pipelines. Real ASS/SSA/SAMI provenance coverage is still missing. A candidate
+pipelines. Representative production ASS/SSA/SAMI coverage remains open; the
+0.1.5 expansion below adds three small licensed upstream samples. A candidate
 upstream fixture with an identifiable commercial-anime title and unclear dialogue
 rights was inspected but not vendored. Repository code licensing alone does not
 establish the rights to every included film transcript.
@@ -126,8 +127,8 @@ node --expose-gc --max-old-space-size=768 research/quality-013/performance.mjs s
 ```
 
 Output files/directories must be new. Run performance after fuzzing completes.
-Node 20/24 and Chromium observations do not establish Firefox, Safari, Linux,
-macOS, every ICU build or every legacy encoding's conformance. Windows-1252 has
+The 0.1.5 Windows Node 20/24, Chromium and Firefox observations do not establish
+Safari, Linux, macOS, every ICU build or every legacy encoding's conformance. Windows-1252 has
 an explicit WHATWG correction and exhaustive byte/alias tests; other legacy
 decoders remain host-dependent.
 

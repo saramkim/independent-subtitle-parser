@@ -1,0 +1,4 @@
+# Preserve the verified source bytes across platforms and core.autocrlf settings.
+# Corpus BOMs, mixed newlines, trailing spaces and damaged text are test inputs.
+* -text
+corpus/** -whitespace

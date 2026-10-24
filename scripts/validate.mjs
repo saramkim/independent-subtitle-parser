@@ -19,7 +19,7 @@ for (let parent = dirname(output); parent !== evidenceRoot; parent = dirname(par
 // Exclusive creation prevents overwriting either phase-one or later frozen runs.
 mkdirSync(dirname(output), { recursive: true });
 mkdirSync(output);
-const inputs = ['src', 'test', 'scripts', 'examples', 'docs', 'corpus', 'research/quality-013', 'research/release-015', 'LICENSE', 'CHANGELOG.md', 'README.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'tsconfig.json', 'entities.reference.json', '.gitignore', 'research/reference-parsers/package.json', 'research/reference-parsers/package-lock.json', 'research/reference-parsers/probe.mjs', 'research/reference-parsers/fixtures.mjs'];
+const inputs = ['src', 'test', 'scripts', 'examples', 'docs', 'corpus', 'research/quality-013', 'research/release-015', '.github', '.gitattributes', 'LICENSE', 'CHANGELOG.md', 'README.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'tsconfig.json', 'entities.reference.json', '.gitignore', 'research/reference-parsers/package.json', 'research/reference-parsers/package-lock.json', 'research/reference-parsers/probe.mjs', 'research/reference-parsers/fixtures.mjs'];
 function files(path) {
   try { return readdirSync(path, { withFileTypes: true }).filter(entry => entry.name !== 'node_modules').flatMap(entry => entry.isDirectory() ? files(resolve(path, entry.name)) : [resolve(path, entry.name)]); }
   catch (error) { if (error.code === 'ENOTDIR') return [path]; throw error; }
@@ -29,6 +29,16 @@ function fingerprint() {
   return { sha256: createHash('sha256').update(JSON.stringify(list)).digest('hex'), files: list };
 }
 const before = fingerprint();
+// Archives can be validated without Git; a checkout also records its exact HEAD
+// and whether the run started with local changes. The fingerprint covers bytes.
+const gitHead = spawnSync('git', ['rev-parse', '--verify', 'HEAD'], { cwd: root, encoding: 'utf8', windowsHide: true, timeout: 10000 });
+const gitStatus = gitHead.status === 0
+  ? spawnSync('git', ['status', '--porcelain=v1', '--untracked-files=normal'], { cwd: root, encoding: 'utf8', windowsHide: true, timeout: 10000 })
+  : null;
+const git = gitHead.status === 0 ? {
+  head: gitHead.stdout.trim(),
+  dirty: gitStatus?.status === 0 ? gitStatus.stdout.length > 0 : null,
+} : null;
 const tests = files(resolve(root, 'test')).filter(path => path.endsWith('.test.mjs')).sort();
 if (!tests.length) throw Error('No tests discovered.');
 const commands = [
@@ -48,7 +58,7 @@ for (const [name, bin, args] of commands) {
   if (result.status !== 0) break;
 }
 const after = fingerprint();
-const summary = { validatedAtUtc: new Date().toISOString(), node: process.version, platform: process.platform, arch: process.arch, sourceFingerprint: before.sha256, inputsUnchanged: before.sha256 === after.sha256, testFiles: tests.map(path => relative(root, path).replaceAll('\\', '/')), results, files: after.files };
+const summary = { validatedAtUtc: new Date().toISOString(), node: process.version, platform: process.platform, arch: process.arch, git, sourceFingerprint: before.sha256, inputsUnchanged: before.sha256 === after.sha256, testFiles: tests.map(path => relative(root, path).replaceAll('\\', '/')), results, files: after.files };
 writeFileSync(resolve(output, 'validation.json'), JSON.stringify(summary, null, 2) + '\n');
 if (results.length !== commands.length || results.some(r => r.exitCode !== 0) || !summary.inputsUnchanged) process.exitCode = 1;
 else console.log(`Input fingerprint: ${before.sha256}`);

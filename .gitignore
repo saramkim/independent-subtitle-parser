@@ -1,6 +1,26 @@
 node_modules/
-dist/
+/dist/
 .package-smoke/
 .reference-cache/
 .runtime-cache/
 *.tgz
+*.log
+
+# Local verification archives and historical working copies are kept on disk.
+/evidence/
+/.quality-snapshot-*/
+/.snapshot-*/
+/.reference-probe.json
+/research/quality-012/
+/research/product-comparison/
+
+# Local tooling and credentials must not enter the public source history.
+/.codex/
+/.agents/
+/.aws/
+/.npmrc
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
