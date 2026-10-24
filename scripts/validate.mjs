@@ -19,7 +19,7 @@ for (let parent = dirname(output); parent !== evidenceRoot; parent = dirname(par
 // Exclusive creation prevents overwriting either phase-one or later frozen runs.
 mkdirSync(dirname(output), { recursive: true });
 mkdirSync(output);
-const inputs = ['src', 'test', 'scripts', 'examples', 'docs', 'corpus', 'research/quality-013', 'research/release-015', 'research/corpus-016', '.github', '.gitattributes', 'LICENSE', 'CHANGELOG.md', 'README.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'tsconfig.json', 'entities.reference.json', '.gitignore', 'research/reference-parsers/package.json', 'research/reference-parsers/package-lock.json', 'research/reference-parsers/probe.mjs', 'research/reference-parsers/fixtures.mjs'];
+const inputs = ['src', 'test', 'scripts', 'examples', 'docs', 'corpus', 'research/quality-013', 'research/release-015', 'research/corpus-016', 'research/corpus-017', '.github', '.gitattributes', 'LICENSE', 'CHANGELOG.md', 'README.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'tsconfig.json', 'entities.reference.json', '.gitignore', 'research/reference-parsers/package.json', 'research/reference-parsers/package-lock.json', 'research/reference-parsers/probe.mjs', 'research/reference-parsers/fixtures.mjs'];
 function files(path) {
   try { return readdirSync(path, { withFileTypes: true }).filter(entry => entry.name !== 'node_modules').flatMap(entry => entry.isDirectory() ? files(resolve(path, entry.name)) : [resolve(path, entry.name)]); }
   catch (error) { if (error.code === 'ENOTDIR') return [path]; throw error; }

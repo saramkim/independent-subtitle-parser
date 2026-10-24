@@ -25,7 +25,7 @@ for(let dataset=0;dataset<2;dataset++)for(const record of manifests[dataset].rec
   if(oracle.unscoredReason){
     const own=parse(source,{format:record.format});
     assert.equal(own.sourceText,source);assert.notEqual(own.status,'fatal');
-    assert.ok(own.diagnostics.some(d=>d.code==='SAMI_MALFORMED_TAG'));
+    assert.ok(own.diagnostics.some(d=>['SAMI_MALFORMED_TAG','SAMI_LEGACY_COMMAND_UNAPPLIED'].includes(d.code)));
     const observations=[{parser:'candidate',scored:false,count:own.cues.length}];
     try {observations.push({parser:'subsrt@1.1.1',scored:false,count:subsrt.parse(source,{format:'smi'}).filter(c=>c.type==='caption').length});}
     catch(error){observations.push({parser:'subsrt@1.1.1',scored:false,error:String(error)});}

@@ -27,6 +27,7 @@ This is a task-oriented guide to common codes, not an exhaustive enum. The
 | --- | --- |
 | `ASS_TIME_WIDTH_RECOVERED` | A one-digit minute/second field was recovered without changing centisecond precision. Original fields retain its spelling. |
 | `SAMI_SOURCE_ID_UNAPPLIED` | Source paragraph text/attributes are retained, but persistent speaker state and separate Source panel display are not modeled. Do not present the reading projection as a complete transcript of that display. |
+| `SAMI_LEGACY_COMMAND_UNAPPLIED` | Complete observed SpanID/ShowImg/DisplayImg commands are retained as opaque metadata and excluded from reading text. Their image, slide and navigation effects are not executed. Warning once per document; result is partial. |
 | `INVALID_ENCODING` | Bytes are invalid in the chosen encoding. Ask for the known encoding or check the original file. Do not silently try alternatives. |
 | `UNSUPPORTED_ENCODING`, `UNSUPPORTED_BOM` | Runtime lacks the encoding or UTF-32 is unsupported. Convert externally with an explicit encoding and retain the original. |
 | `ENCODING_BOM_CONFLICT` | Explicit encoding conflicts with BOM. Correct the choice or investigate the source; do not ignore the BOM silently. |

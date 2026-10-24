@@ -9,6 +9,7 @@ interface Tag {
   closing: boolean;
   fields: Field[];
   malformed: boolean;
+  legacyCommand?: boolean;
 }
 interface Paragraph { start: number; contentStart: number; end: number; fields: Field[]; className: string }
 interface SyncBlock { start: number; offset: number; paragraphs: Paragraph[] }
@@ -20,6 +21,7 @@ const KNOWN_TAGS = new Set(['b', 'basefont', 'bdo', 'big', 'blockquote', 'br', '
 /** A bounded forward scanner, not an HTML parser or execution environment. */
 function* tags(input: string): Generator<Tag> {
   let offset = 0;
+  const legacyPrefix = /<(spanid|showimg|displayimg)(?=[:=])/iy;
   while (offset < input.length) {
     const start = input.indexOf('<', offset);
     if (start < 0) return;
@@ -27,6 +29,27 @@ function* tags(input: string): Generator<Tag> {
       const close = input.indexOf('-->', start + 4);
       const end = close < 0 ? input.length : close + 3;
       yield { start, end, name: '!comment', closing: false, fields: [], malformed: close < 0 };
+      offset = end;
+      continue;
+    }
+    legacyPrefix.lastIndex = start;
+    const legacy = legacyPrefix.exec(input);
+    if (legacy) {
+      let end = legacyPrefix.lastIndex;
+      let quote = '';
+      let valueBoundary = false;
+      // Recognize only this observed extension family. An embedded '<' is a
+      // recovery boundary even inside a broken quote: never swallow later SYNC.
+      for (; end < input.length && input[end] !== '<'; end++) {
+        const char = input[end]!;
+        if (quote) { if (char === quote) quote = ''; }
+        else if ((char === '"' || char === "'") && valueBoundary) quote = char;
+        else if (char === '>') break;
+        if (!quote && !SPACE.test(char)) valueBoundary = char === ':' || char === '=';
+      }
+      const complete = input[end] === '>' && !quote;
+      if (complete) end++;
+      yield { start, end, name: legacy[1]!.toLowerCase(), closing: false, fields: [], malformed: !complete, legacyCommand: complete };
       offset = end;
       continue;
     }
@@ -216,6 +239,7 @@ function projectText(raw: string, ctx: ParseContext, line: number): string {
       continue;
     }
     if (tag.name.startsWith('!')) continue;
+    if (tag.legacyCommand) continue;
     if (tag.malformed) {
       append(raw.slice(tag.start, tag.end));
       continue;
@@ -279,6 +303,7 @@ export function parseSami(lines: string[], ctx: ParseContext): void {
   let sawRoot = false;
   let sawSync = false;
   let warnedSourceId = false;
+  let warnedLegacyCommand = false;
   let previousStart: number | null = null;
   let strayStart: number | null = null;
   const finishParagraph = (end: number): void => {
@@ -395,6 +420,18 @@ export function parseSami(lines: string[], ctx: ParseContext): void {
     if (tag.malformed) ctx.diagnostic('SAMI_MALFORMED_TAG', 'warning', 'Malformed or unterminated markup was found; inspect sourceText for the exact input.', lineAt(tag.start));
     if (capture) {
       if (tag.closing && tag.name === capture.name) finishCapture(tag.start, tag.end);
+      continue;
+    }
+    if (tag.legacyCommand) {
+      ctx.metadata.push({ kind: 'sami-legacy-command', raw: input.slice(tag.start, tag.end), source: range(tag.start, tag.end), fields: [
+        { name: 'command', value: tag.name },
+        ...(block ? [{ name: 'start', value: String(block.start) }] : []),
+        ...(paragraph ? [{ name: 'class', value: paragraph.className }] : []),
+      ] });
+      if (!warnedLegacyCommand) {
+        warnedLegacyCommand = true;
+        ctx.diagnostic('SAMI_LEGACY_COMMAND_UNAPPLIED', 'warning', 'Legacy authoring commands are retained as opaque metadata and omitted from reading text; image, navigation and other command effects are not executed.', lineAt(tag.start));
+      }
       continue;
     }
     if (tag.name === 'sami' && !tag.closing) sawRoot = true;

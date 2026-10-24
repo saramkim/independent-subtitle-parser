@@ -26,7 +26,8 @@ types. Times are **nonnegative safe integer milliseconds**, never seconds.
 - Tracks expose `id` and available `language`, `label`, `kind`, `sourceClass`.
   ASS styles and speakers are event fields, not invented language tracks.
 - Ordered `{ name, value }` fields retain duplicates and names such as
-  `__proto__` as data. Metadata preserves non-cue format blocks. Source line
+  `__proto__` as data. Metadata preserves non-cue format blocks with normalized
+  LF line endings; `sourceText` preserves their original spelling. Source line
   ranges aid inspection; character offsets and round-trip serialization are absent.
 
 Cues retain source order, duplicates, overlaps and authored Unicode. There is no
@@ -110,6 +111,20 @@ not a claim of legacy playback alignment. Conflicting selected format and known
 `ScriptType` produce `ASS_SCRIPT_TYPE_MISMATCH`; declared column mapping is retained.
 
 ## Resource and security model
+
+Since 0.1.7, complete case-insensitive `<SpanID:...>`, `<SpanID=...>`,
+`<ShowImg:...>`, `<ShowImg=...>`, `<DisplayImg:...>` and `<DisplayImg=...>`
+tokens are a narrow legacy-authoring compatibility profile. They are excluded
+from reading text and retained with LF-normalized line endings in
+`sami-legacy-command` metadata with
+ordered `command`, optional `start` and optional `class` fields and a source
+range. Values are opaque; commands inside comments/script/style are inactive.
+Quoted `>` is supported; `<` always ends a damaged token for recovery, even
+inside quotes. Incomplete commands remain literal with a malformed-tag warning.
+The once-per-document `SAMI_LEGACY_COMMAND_UNAPPLIED` warning makes the result
+partial. Image, slide, navigation and other command effects are not executed;
+this is not a claim to implement an official command grammar. See
+[evidence and limits](CORPUS-017.md).
 
 Since 0.1.6, SAMI CSS `SAMI_Type` is recognized alongside `SAMIType`. Source ID
 paragraphs warn once per document with `SAMI_SOURCE_ID_UNAPPLIED`: their text and

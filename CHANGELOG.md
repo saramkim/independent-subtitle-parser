@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.7 — legacy SAMI commands and large real ASS/SSA validation, unpublished
+
+- Retain observed `SpanID`, `ShowImg` and `DisplayImg` authoring commands as opaque
+  `sami-legacy-command` metadata; exclude complete commands from reading text so
+  they cannot create phantom captions or prevent NBSP clears. Warn once with
+  `SAMI_LEGACY_COMMAND_UNAPPLIED`. No command effects are executed.
+- Recover incomplete commands at the next `<`; preserve their literal text and
+  diagnose malformed syntax. Quoted `>` and unquoted apostrophes are covered.
+- Add seven hash-pinned local evaluation files, including 7.6 MB and 5.9 MB ASS
+  animation-heavy originals and three long-form SSA v4 files. Independent
+  expectations cover every event's time/raw fields and a declared reading subset.
+- Score three previously unscored legacy SAMI files under a narrow nonspoken
+  command profile. Demo layout and interactive playback remain unscored.
+- See [scope, comparisons and reproduction](docs/CORPUS-017.md). No npm release
+  or product integration has been performed.
+
 ## 0.1.6 — ASS/SSA/SAMI corpus validation, unpublished
 
 - Recover unpadded ASS minute/second fields with `ASS_TIME_WIDTH_RECOVERED`;

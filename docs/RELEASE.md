@@ -1,6 +1,6 @@
 # Publication preparation
 
-This is the local **0.1.6** candidate for **independent-subtitle-parser**.
+This is the local **0.1.7** candidate for **independent-subtitle-parser**.
 The owner selected the package name and MIT license. `private: true` intentionally
 prevents accidental publication. No registry publication is authorized.
 
@@ -22,7 +22,7 @@ outside the package. Their licenses remain in the source snapshot.
 Install the locally built candidate with:
 
 ```sh
-npm install ./independent-subtitle-parser-0.1.6.tgz
+npm install ./independent-subtitle-parser-0.1.7.tgz
 ```
 
 This package is ESM-only. CommonJS callers use dynamic `import()`; a synchronous
@@ -48,6 +48,8 @@ node --expose-gc --max-old-space-size=768 research/quality-013/performance.mjs s
 ```
 
 The core comparison and authored format probes are described in [CORPUS.md](CORPUS.md).
+The latest large real ASS/SSA files, legacy SAMI command policy and reproduction
+commands are described in [CORPUS-017.md](CORPUS-017.md).
 After `npm run check:package`, its output identifies a consumer directory and the
 installed package inside it. Pass that consumer directory to
 `node research/release-015/bundle-consumer.mjs <consumer-directory> evidence/new-bundle.json`.
@@ -87,7 +89,7 @@ Safari/macOS/Linux remain unverified. Each report records its tested tarball has
 If final documentation changes the archive hash, evidence reuse requires an
 explicit file-by-file comparison proving runtime, declarations, examples and
 package metadata identical; the new tarball still receives fresh package checks.
-These observations are not blanket platform certification. The 0.1.6 parser
+These observations are not blanket platform certification. The 0.1.7 parser
 runtime changes require new browser evidence; the 0.1.5 browser results cannot
 be carried forward as a current-runtime pass.
 

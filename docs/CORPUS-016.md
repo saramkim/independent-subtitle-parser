@@ -1,5 +1,9 @@
 # ASS/SSA/SAMI validation in 0.1.6
 
+This is historical 0.1.6 evidence. [The 0.1.7 follow-up](CORPUS-017.md) evaluates
+the three legacy-command files under an explicit extraction profile and expands
+real ASS/SSA coverage; it does not retroactively turn old unscored cases into passes.
+
 This is a bounded extraction-profile evaluation, not full rendering conformance
 or a claim to be better than every subtitle library.
 

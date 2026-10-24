@@ -1,0 +1,82 @@
+{
+  "records": [
+    {
+      "id": "jassub/kusuriya.ass",
+      "format": "ass",
+      "encoding": "utf-8",
+      "url": "https://raw.githubusercontent.com/ThaUnknown/jassub/482a2fed6c8976550f09383e90d92b6ac3360fc9/test/fixtures/subtitles/Kusriya%20S2%20OP1v3.ass",
+      "revision": "482a2fed6c8976550f09383e90d92b6ac3360fc9",
+      "path": ".reference-cache/corpus-017/jassub/kusuriya.ass",
+      "bytes": 7634439,
+      "sha256": "21109ceb7b4c3543c2b206e88df1d2d1f43a2282f0a6a5a11b9349f171c299ad",
+      "redistribution": "Not established; local evaluation only"
+    },
+    {
+      "id": "jassub/beastars.ass",
+      "format": "ass",
+      "encoding": "utf-8",
+      "url": "https://raw.githubusercontent.com/ThaUnknown/jassub/482a2fed6c8976550f09383e90d92b6ac3360fc9/test/fixtures/subtitles/beastars.ass",
+      "revision": "482a2fed6c8976550f09383e90d92b6ac3360fc9",
+      "path": ".reference-cache/corpus-017/jassub/beastars.ass",
+      "bytes": 5863883,
+      "sha256": "6a6ff0c63e4ab32506bf464b7615b86464cc80657870386214b9b9d8304a977f",
+      "redistribution": "Not established; local evaluation only"
+    },
+    {
+      "id": "ffmpeg/fribidi-arabic.ass",
+      "format": "ssa",
+      "encoding": "utf-8",
+      "url": "https://samples.ffmpeg.org/sub/fribidi/fribidi_arabic_subs.ass",
+      "path": ".reference-cache/corpus-017/ffmpeg/fribidi-arabic.ass",
+      "bytes": 833,
+      "sha256": "a1be488d29b15969c91fd38c9d0d8afaac022cf9cd9f6feaebc7e070252fce6e",
+      "redistribution": "Not established; local evaluation only"
+    },
+    {
+      "id": "ffmpeg/fribidi-hebrew.ass",
+      "format": "ssa",
+      "encoding": "utf-8",
+      "url": "https://samples.ffmpeg.org/sub/fribidi/fribidi_hebrew_subs.ass",
+      "path": ".reference-cache/corpus-017/ffmpeg/fribidi-hebrew.ass",
+      "bytes": 848,
+      "sha256": "77d1cabfcc7a115dfadd987a8d0e972490b2b85516e7c736b9bc305885a03dc6",
+      "redistribution": "Not established; local evaluation only"
+    },
+    {
+      "id": "ssa/source-1.ssa",
+      "url": "https://raw.githubusercontent.com/Ajatt-Tools/kitsunekko-mirror/f91705371dbab093f780cc4c0efaac1ceda62518/subtitles/anime_movie/Tekkon%20Kinkreet/%5BPOPGO%5DTekkon_kinkreet.jpn.ssa",
+      "revision": "f91705371dbab093f780cc4c0efaac1ceda62518",
+      "blobSha": "46b51019dd07cd9ba8323b65e1717bee8246b438",
+      "path": ".reference-cache/corpus-017/ssa/source-1.ssa",
+      "format": "ssa",
+      "encoding": "utf-8",
+      "bytes": 142809,
+      "sha256": "61e4d058d76d83328a8b7751381a05dab4aa67bb5542d3659a601e59cebf902d",
+      "redistribution": "Not established; local evaluation only"
+    },
+    {
+      "id": "ssa/source-2.ssa",
+      "url": "https://raw.githubusercontent.com/foxofice/sub_share/fbd5788cb8a47e22a74e4bd7a421148ae1abc63e/subs_list/animation/1979/(1979.8.4)%E9%93%B6%E6%B2%B3%E9%93%81%E9%81%93999%20%E5%89%A7%E5%9C%BA%E7%89%88/BD/%5BHenshin%5D/%5BHenshin%5D_Ginga_Tetsudou_999_(BD_x264_1280x720_FLAC).ssa",
+      "revision": "fbd5788cb8a47e22a74e4bd7a421148ae1abc63e",
+      "blobSha": "66a49598f82ce0aeb18d737bde451076fc67c1f8",
+      "path": ".reference-cache/corpus-017/ssa/source-2.ssa",
+      "format": "ssa",
+      "encoding": "utf-8",
+      "bytes": 94703,
+      "sha256": "f74a7df1f1fa5327859ff98f181de029601ed7e63c635c4e1ccc173ce5cf04a2",
+      "redistribution": "Not established; local evaluation only"
+    },
+    {
+      "id": "ssa/source-3.ssa",
+      "url": "https://raw.githubusercontent.com/foxofice/sub_share/fbd5788cb8a47e22a74e4bd7a421148ae1abc63e/subs_list/animation/2005/(2005.8.26)%E6%98%9F%E7%95%8C%E7%9A%84%E6%88%98%E6%97%973/DVD/%5Bdmhy%5D/%5Bdmhy%5D%5BBattle_Flag_of_the_Stars_III%5D%5B02%5D%5Bxvid11%5D%5BB14C73C9%5D.track3.ssa",
+      "revision": "fbd5788cb8a47e22a74e4bd7a421148ae1abc63e",
+      "blobSha": "809e080ed612bbd62e8384065e8e3968006836e8",
+      "path": ".reference-cache/corpus-017/ssa/source-3.ssa",
+      "format": "ssa",
+      "encoding": "utf-8",
+      "bytes": 86954,
+      "sha256": "f6e9bd37f5696b7fe3fc6b11ec7f6a1cb92441baa973b9493abddb0fe238ef68",
+      "redistribution": "Not established; local evaluation only"
+    }
+  ]
+}
