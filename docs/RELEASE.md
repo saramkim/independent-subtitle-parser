@@ -1,7 +1,8 @@
 # Release preparation
 
 This checklist is for maintainers of `independent-subtitle-parser`. The current
-0.1.7 candidate is unpublished and retains `private: true`. Local preparation
+0.1.7 candidate has a public manifest prepared for release; npm publication is
+still pending account authentication and approval of the exact artifact. Local preparation
 and successful validation are not registry publication or hosted CI results.
 
 ## Readiness snapshot
@@ -16,14 +17,14 @@ and successful validation are not registry publication or hosted CI results.
 | Hosted CI | Nine Node 20/22/24 × Windows/Ubuntu/macOS jobs passed; see [recorded run and commit](CI.md) |
 | Current browser matrix | Windows Chromium 156 tested; Firefox/Safari and other OS combinations not revalidated for 0.1.7 |
 | Registry and account | Availability, maintainer identity and publishing permissions must be verified at release time |
-| Publication | Not authorized or performed as part of preparation; private:true remains |
+| Publication | Public manifest prepared; actual npm publication requires account authentication and explicit artifact approval |
 
 A public repository/reporting destination is configured and the first hosted
 matrix passed. Verify the latest release revision independently; prior green
 CI is not npm publication approval. A first 0.x release must describe its tested scope rather than
 claim complete subtitle or renderer conformance.
 
-## Validate a private candidate
+## Validate the release candidate
 
 ```sh
 npm ci --ignore-scripts
@@ -35,11 +36,12 @@ runs the Node example and records a benchmark in a new `evidence/` directory.
 In PowerShell, use `npm.cmd run validate -- --output evidence/<new-directory>`
 when the npm.ps1 wrapper consumes `--`. Existing frozen evidence is never overwritten.
 
-`npm run check:package` checks ESM and CommonJS dynamic import, TypeScript
+`npm run check:release` checks ESM and CommonJS dynamic import, TypeScript
 NodeNext/Bundler declarations, README/usage recipes and all installed Markdown
 file links. Every tar entry is compared with source and installed bytes; npm
 SHA-1/SHA-512 metadata, the file allowlist, zero runtime dependencies and
-repeat-pack identity are checked. It requires `private: true`.
+repeat-pack identity are checked. It requires a public manifest. The earlier
+`check:package` preparation mode is only for manifests with `private: true`.
 
 The tarball includes runtime JS/declarations, examples, README, CONTRIBUTING,
 documentation, changelog, MIT license and third-party notices. It excludes test
@@ -64,9 +66,9 @@ harnesses and redistributable fixtures.
    Availability is not a reservation. Retain accurate pre-release/0.x messaging.
 4. Prepare the public manifest by removing `private: true` only for the authorized
    release candidate. Change README's installation section to the real registry
-   command `npm install independent-subtitle-parser` and remove the unpublished
-   candidate notice in that release revision. Do not advertise the registry
-   installation while it is unavailable.
+   command `npm install independent-subtitle-parser`, qualified as requiring a
+   published version until publication succeeds. Keep tarball instructions for
+   unpublished candidates; do not claim registry availability before verification.
 5. Run `npm run validate` again. It automatically selects `check:release` for a
    public manifest. `npm run check:release` can also be run directly: it requires
    a public manifest plus HTTPS repository/homepage/bug URLs, then runs the same

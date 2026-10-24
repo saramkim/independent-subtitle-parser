@@ -14,18 +14,18 @@ the [README](../README.md); test sources and evidence are not in the tarball.
 ```sh
 npm ci --ignore-scripts
 npm test
-npm run check:package
+npm run check:release
 npm run bench
 node examples/node.mjs
 node examples/serve.mjs
 ```
 
-`npm run check:package` packs and installs a local tarball into an isolated
+`npm run check:release` packs and installs a local tarball into an isolated
 consumer, checks ESM/CommonJS dynamic imports, TypeScript NodeNext/Bundler
 resolution and included examples. It compares actual tar entries, installed files
 and source bytes, and checks repeated pack reproducibility. This check requires
 `tar` on PATH (included in modern Windows, Linux and macOS). It does not publish.
-The package stays private pending separate publication authorization. The owner
+The public manifest is prepared; publication requires separate authorization. The owner
 selected MIT for original code. The third-party data has its own
 notices; those do not license the author's code.
 
@@ -95,8 +95,8 @@ benchmarks are observations, not timing thresholds on shared CI machines.
 
 Use focused commits for later changes. Connect a release's source commit, fresh
 validation fingerprint and exact package hash; create a release tag only when the
-actual candidate is selected. Keep `private: true` until publication is explicitly
-authorized. See [publication preparation](RELEASE.md).
+actual candidate is selected. Preparing the public manifest does not authorize
+publication. See [publication preparation](RELEASE.md).
 
 See [corpus methodology](CORPUS.md) for reproduction and licenses, and
 [quality gates](QUALITY.md) for remaining limitations. The library still has no

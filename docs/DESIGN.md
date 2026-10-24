@@ -90,5 +90,5 @@ video demuxer, network fetcher, storage adapter, CommonJS build or integration i
 the two products is included. Broader real-file corpus and platform testing,
 full semantic AST needs and public release remain future work. The owner has
 selected the independent-subtitle-parser name and MIT license; publication is
-still separately gated by `private: true` and explicit authorization. The local
+still separately gated by account authentication and explicit artifact approval. The local
 hash manifest pins each candidate for comparison.

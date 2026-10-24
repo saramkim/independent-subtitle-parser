@@ -20,7 +20,7 @@ receive fresh artifact checks. Historical results are labeled separately.
 | Performance/memory | Isolated real-file and synthetic command-stream observations, correct cue counts, GC and RSS reporting; additional metadata costs memory and RSS is not bounded by V8 old-space alone |
 | Consumers | Hosted Node 20/22/24 on Windows/Ubuntu/macOS: 412 tests in each of nine jobs; local Windows Chromium 156: 16 scenarios; actual tarball imports/declarations/examples/links/byte identity checked |
 | Unexecuted targets | Native Firefox/Safari and browser execution on Linux/macOS have not been revalidated for 0.1.7. Older Firefox evidence is specifically 0.1.5; Node CI does not validate browsers |
-| Publication | MIT and provenance documented; public GitHub repository/reporting metadata connected; first hosted matrix passed; private:true retained and npm publication still requires explicit approval |
+| Publication | MIT and provenance documented; public GitHub repository/reporting metadata connected; public manifest prepared; npm publication still requires authentication and explicit artifact approval |
 
 See [latest corpus details](CORPUS-017.md) and [earlier corpus methodology](CORPUS.md)
 plus the [hosted CI record](CI.md)

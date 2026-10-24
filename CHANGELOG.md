@@ -3,10 +3,11 @@
 ## 0.1.7 — legacy SAMI commands and large real ASS/SSA validation, unpublished
 
 - Connect the public GitHub source repository, issue/PR routes and npm repository
-  metadata. npm publication remains disabled with `private: true`.
+  metadata. Prepare the public 0.1.7 manifest and registry/tarball installation
+  instructions; actual npm publication remains pending separate approval.
 - Prepare public-facing README, contribution/reporting guides and GitHub issue/PR
   templates. Include contribution/reporting guides in the package. Add a separate
-  release package check; the current candidate retains `private: true`.
+  release package check for the public manifest.
 - Retain observed `SpanID`, `ShowImg` and `DisplayImg` authoring commands as opaque
   `sami-legacy-command` metadata; exclude complete commands from reading text so
   they cannot create phantom captions or prevent NBSP clears. Warn once with

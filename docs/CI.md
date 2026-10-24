@@ -42,8 +42,9 @@ receive their own CI runs. The workflow page and README badge show current statu
 
 Each job uploads its validation logs and candidate tarball as a GitHub Actions
 artifact with 14-day retention. Download reports before expiry when preserving
-release evidence. Artifacts from this workflow retain `private: true` while the
-package is an unpublished candidate; passing CI does not grant publication rights.
+release evidence. The first run cited above used `private: true`; later release
+candidates use a public manifest and `check:release`. Neither mode publishes,
+and passing CI does not grant publication rights.
 
 ## What it does not check
 

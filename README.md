@@ -16,8 +16,13 @@ For styled ASS playback, use a dedicated renderer alongside the preserved source
 
 ## Install
 
-**0.1.7 is a pre-release candidate and is not published to npm yet.** Install a
-supplied candidate tarball in your application:
+Registry installation (requires a published version):
+
+```sh
+npm install independent-subtitle-parser
+```
+
+For an unpublished release candidate, install the supplied tarball instead:
 
 ```sh
 npm install ./independent-subtitle-parser-0.1.7.tgz
