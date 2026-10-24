@@ -4,7 +4,7 @@ Read **SRT, WebVTT, SAMI/SMI and ASS/SSA** with one TypeScript API in browsers a
 Node.js. No runtime dependencies, DOM, storage, network access or renderer inside
 the library. It preserves source text and reports recovery and unsupported data.
 
-**0.1.5 is an unpublished local candidate.** The owner selected this package name
+**0.1.6 is an unpublished local candidate.** The owner selected this package name
 and the [MIT license](LICENSE). `private: true` still prevents publication;
 an actual release requires separate authorization.
 
@@ -13,7 +13,7 @@ an actual release requires separate authorization.
 Use the supplied local tarball, not the public npm registry:
 
 ```sh
-npm install /absolute/path/to/independent-subtitle-parser-0.1.5.tgz
+npm install /absolute/path/to/independent-subtitle-parser-0.1.6.tgz
 ```
 
 Node.js 20+; ESM with TypeScript declarations. CommonJS callers can use

@@ -1,6 +1,6 @@
 # Publication preparation
 
-This is the local **0.1.5** candidate for **independent-subtitle-parser**.
+This is the local **0.1.6** candidate for **independent-subtitle-parser**.
 The owner selected the package name and MIT license. `private: true` intentionally
 prevents accidental publication. No registry publication is authorized.
 
@@ -22,7 +22,7 @@ outside the package. Their licenses remain in the source snapshot.
 Install the locally built candidate with:
 
 ```sh
-npm install ./independent-subtitle-parser-0.1.5.tgz
+npm install ./independent-subtitle-parser-0.1.6.tgz
 ```
 
 This package is ESM-only. CommonJS callers use dynamic `import()`; a synchronous
@@ -78,7 +78,7 @@ Consult [quality criteria](QUALITY.md), [corpus methodology](CORPUS.md),
 the exact runtime, platform, input fingerprint and artifact hash of each run.
 An unexecuted browser/OS cell is NOT RUN, not a pass. A browser-control tool
 failure is not evidence of a parser defect or successful browser compatibility.
-Firefox 158.0.1 was acquired from Mozilla and launched in an isolated profile.
+For 0.1.5, Firefox 158.0.1 was acquired from Mozilla and launched in an isolated profile.
 Native automation was blocked by the tool's Windows browser URL policy, so the
 owner opened the local harness manually; its twelve automated checks passed and
 the server saved the result. Chromium 156 passed the same twelve flows, including
@@ -87,7 +87,9 @@ Safari/macOS/Linux remain unverified. Each report records its tested tarball has
 If final documentation changes the archive hash, evidence reuse requires an
 explicit file-by-file comparison proving runtime, declarations, examples and
 package metadata identical; the new tarball still receives fresh package checks.
-These observations are not blanket platform certification.
+These observations are not blanket platform certification. The 0.1.6 parser
+runtime changes require new browser evidence; the 0.1.5 browser results cannot
+be carried forward as a current-runtime pass.
 
 Current samples do not establish comprehensive ASS/SSA/SAMI production coverage.
 Mutation/property fuzzing is not coverage-guided fuzzing, a hard memory bound or

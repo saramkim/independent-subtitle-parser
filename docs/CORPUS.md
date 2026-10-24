@@ -1,5 +1,8 @@
 # Corpus, comparison and robustness methodology
 
+The [0.1.6 ASS/SSA/SAMI expansion](CORPUS-016.md) adds 18 redistributable originals
+and 19 local-only inputs, with per-dimension scoring and explicit unscored cases.
+
 The 0.1.3 work uses external tests as evidence, not as an instruction to copy
 another parser's behavior. No WebSubtitle or Play Plus source was changed or
 incorporated. No compatibility adapters or public npm publication were performed.

@@ -111,6 +111,12 @@ not a claim of legacy playback alignment. Conflicting selected format and known
 
 ## Resource and security model
 
+Since 0.1.6, SAMI CSS `SAMI_Type` is recognized alongside `SAMIType`. Source ID
+paragraphs warn once per document with `SAMI_SOURCE_ID_UNAPPLIED`: their text and
+fields survive, but persistent speaker state is not modeled. ASS one-digit
+minute/second fields recover with `ASS_TIME_WIDTH_RECOVERED`; fractional precision
+remains exactly two digits. See [corpus adjudication](CORPUS-016.md).
+
 | Budget | Default |
 | --- | ---: |
 | `maxInputLength` | 8,388,608 UTF-16 code units |

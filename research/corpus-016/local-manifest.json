@@ -1,0 +1,214 @@
+{
+  "note": "Raw subtitle files and transcript expectations are excluded from Git and npm. URLs are retrieval sources, not license grants.",
+  "records": [
+    {
+      "id": "astisub/example-in.ssa",
+      "path": ".reference-cache/corpus-016/astisub/example-in.ssa",
+      "url": "https://raw.githubusercontent.com/asticode/go-astisub/7671e72e9d47287d6f8ded80a004560b63a2ead5/testdata/example-in.ssa",
+      "format": "ssa",
+      "category": "local-only",
+      "bytes": 1362,
+      "sha256": "0c60fe346e3670a0407e240bc538f6bb152f7e7961259ce9575454f9720cfeec",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "astisub/example-in-carriage-return.ssa",
+      "path": ".reference-cache/corpus-016/astisub/example-in-carriage-return.ssa",
+      "url": "https://raw.githubusercontent.com/asticode/go-astisub/7671e72e9d47287d6f8ded80a004560b63a2ead5/testdata/example-in-carriage-return.ssa",
+      "format": "ssa",
+      "category": "local-only",
+      "bytes": 1191,
+      "sha256": "4f391aae64f98dd4f549685f71d3ce2c704d19b2c2f2bd2ab6e9602f3df7d70a",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "astisub/example-out.ssa",
+      "path": ".reference-cache/corpus-016/astisub/example-out.ssa",
+      "url": "https://raw.githubusercontent.com/asticode/go-astisub/7671e72e9d47287d6f8ded80a004560b63a2ead5/testdata/example-out.ssa",
+      "format": "ssa",
+      "category": "local-only",
+      "bytes": 1314,
+      "sha256": "f1146cfebcd86f7295e3d07cda29459f14e52ee385c6810a5738d0708924231a",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "astisub/example-out-v4plus.ssa",
+      "path": ".reference-cache/corpus-016/astisub/example-out-v4plus.ssa",
+      "url": "https://raw.githubusercontent.com/asticode/go-astisub/7671e72e9d47287d6f8ded80a004560b63a2ead5/testdata/example-out-v4plus.ssa",
+      "format": "ass",
+      "category": "local-only",
+      "bytes": 1273,
+      "sha256": "54d2f1c4d1920e4c3febe9ebb0c1372d7ab7ad46cabf26e1ff36e849d0dca7b4",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "gaupol/ssa.ssa",
+      "path": ".reference-cache/corpus-016/gaupol/ssa.ssa",
+      "url": "https://raw.githubusercontent.com/otsaloma/gaupol/82b1afab349570c4c76f080b6546c3bb5f2bab6f/data/samples/ssa.ssa",
+      "format": "ssa",
+      "category": "local-only",
+      "bytes": 1701,
+      "sha256": "076983a2fea188b771a31b6f5bd15e614a651605f98aa4ffc400d8c6392d85a3",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "gaupol/ass.ass",
+      "path": ".reference-cache/corpus-016/gaupol/ass.ass",
+      "url": "https://raw.githubusercontent.com/otsaloma/gaupol/82b1afab349570c4c76f080b6546c3bb5f2bab6f/data/samples/ass.ass",
+      "format": "ass",
+      "category": "local-only",
+      "bytes": 1731,
+      "sha256": "4682c91d7751754796c2dc9fa2ea4a9baabb023442cc24b71013b07719c5dd3e",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/Intro_to_Message_Routing.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/Intro_to_Message_Routing.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/Intro_to_Message_Routing.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 7838,
+      "sha256": "2139ca331dbd33e146bb4686cf22338650737cdae395b5472b6d9693cb7b2891",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/Intro_to_SMTP_messaging.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/Intro_to_SMTP_messaging.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/Intro_to_SMTP_messaging.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 4078,
+      "sha256": "fe7a5e89584fbae7b4e4385fbf6d201eaec1cec9093bce1b47ad420ae3d196ee",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/OneNote_Manager.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/OneNote_Manager.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/OneNote_Manager.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 2895,
+      "sha256": "d31dbd7e4fd7b16011ce1d66532afb423a4f56db3424613868246eda64605725",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/SAMI_Demo.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/SAMI_Demo.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/SAMI_Demo.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 8056,
+      "sha256": "902044049471db96c0839d6eb37638a65aba56f171fb0dda24588e2311d5516a",
+      "encoding": "shift_jis",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/Sample2.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/Sample2.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/Sample2.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 2890,
+      "sha256": "dcfdd30f0c8c855326f8864e7d4a8f5321924342713fdd962bb704a35beb5222",
+      "encoding": "shift_jis",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/Tour.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/Tour.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/Tour.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 4995,
+      "sha256": "bcb72980dc61da2b77dc220694022e1f69229eef36c0f000a90e2a83fb1f46be",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/sami-div.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/sami-div.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/sami-div.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 2335,
+      "sha256": "20d02037336a7fe4d14c2882be2bc8db85aad67de6d684058e6d2d1a7531c220",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/sami-table.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/sami-table.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/sami-table.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 1419,
+      "sha256": "6485cacd7bc79c6211d7e7c1407c3dca3b201afcb33d43d4ad6028693a12cd1d",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/sample-sami.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/sample-sami.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/sample-sami.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 2133,
+      "sha256": "5b5ab02f1ef4eb4fd79bb26dc509c3976fae78556b359500db5ecf3f16b0f57d",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/testvideo.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/testvideo.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/testvideo.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 1194,
+      "sha256": "1b53f103cb559c06fd90931478fcdd8e0c52af68d01d02bdcd3dcb45e81b2f03",
+      "encoding": "windows-1252",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/SAMI 01 hour.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/SAMI 01 hour.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/SAMI%2001%20hour.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 1507,
+      "sha256": "f125e8fa74b5e8b47499f0a5011600df8a728b9410f606d26a708db1a4d5d4ce",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "ffmpeg/bora_1.smi",
+      "path": ".reference-cache/corpus-016/ffmpeg/bora_1.smi",
+      "url": "https://samples.ffmpeg.org/sub/sami/bora_1.smi",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 2816,
+      "sha256": "11bfcc258194951a67dcc7e867526f57aa25b627526db3c6676e56cc791c48ee",
+      "encoding": "euc-kr",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    },
+    {
+      "id": "pbs/example.sami",
+      "path": ".reference-cache/corpus-016/pbs/example.sami",
+      "url": "https://raw.githubusercontent.com/pbs/pycaption/9f32e0cbc11f15e3b2d3f7e45ee035ecda9fc794/examples/example.sami",
+      "format": "sami",
+      "category": "local-only",
+      "bytes": 204256,
+      "sha256": "c8790de211df03c2f90ffaded42b5769a69cda801d922b6b54ac0288e64cbb77",
+      "encoding": "utf-8",
+      "redistribution": "Not established; local acquisition and evaluation only"
+    }
+  ]
+}

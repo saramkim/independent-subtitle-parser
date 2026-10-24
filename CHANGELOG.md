@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.6 — ASS/SSA/SAMI corpus validation, unpublished
+
+- Recover unpadded ASS minute/second fields with `ASS_TIME_WIDTH_RECOVERED`;
+  keep centisecond precision strict and preserve original event fields.
+- Read legacy SAMI `SAMI_Type` as well as `SAMIType` into track kind.
+- Warn once per document for unapplied SAMI Source ID speaker persistence;
+  retain its paragraph text and attributes without claiming layout support.
+- Add 18 pinned, licensed upstream ASS/SSA/SAMI originals and independent
+  source-derived oracles. Evaluate 19 additional local-only originals without
+  redistributing transcripts of uncertain license. Record unscored legacy
+  player commands separately from passing cases.
+- Expand the mutation corpus and current-runtime correctness, package and
+  performance checks. Keep `private: true`; no adapters or publication.
+
 ## 0.1.5 — publication preparation, unpublished
 
 - Confirm the package name and apply the owner-selected MIT license to original

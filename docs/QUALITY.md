@@ -54,6 +54,9 @@ invariants under a process timeout. This improves evidence, not perfection.
 5. Package name/license decisions and an approved immutable publish candidate.
 6. Product compatibility adapters and integration, last.
 
-Version 0.1.5 is local publication preparation. It is not a public-release sign-off.
+Version 0.1.6 is local publication preparation. It is not a public-release sign-off.
+The [current corpus expansion](CORPUS-016.md) adds 37 originals, including a long
+SAMI broadcast sample. Historical browser/OS results in the table above refer to
+0.1.5; they are not fresh validation of the changed 0.1.6 runtime.
 See [corpus and robustness methodology](CORPUS.md), including the two unresolved
 damaged Chinese files and intentional differences from browser error recovery.

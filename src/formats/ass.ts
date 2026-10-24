@@ -31,13 +31,16 @@ function eventFormatValid(names: string[]): boolean {
 }
 
 function timestamp(value: string, ctx: ParseContext, line: number): number | null {
-  const match = /^(\d+):(\d{2}):(\d{2})\.(\d{2})$/.exec(value.trim());
+  const match = /^(\d+):(\d{1,2}):(\d{1,2})\.(\d{2})$/.exec(value.trim());
   if (!match) return null;
   const hours = Number(match[1]);
   const minutes = Number(match[2]);
   const seconds = Number(match[3]);
   const millis = ((hours * 60 + minutes) * 60 + seconds) * 1000 + Number(match[4]) * 10;
   if (minutes > 60 || seconds > 60 || !Number.isSafeInteger(millis)) return null;
+  if (match[2]!.length !== 2 || match[3]!.length !== 2) {
+    ctx.diagnostic('ASS_TIME_WIDTH_RECOVERED', 'warning', 'An unpadded minute or second component was recovered; centisecond precision and original fields are retained.', line);
+  }
   // The libass authoring guide permits 60 in minute/second components. Keep the
   // value, but flag normalization because most conventional clocks use 00-59.
   if (minutes === 60 || seconds === 60) {

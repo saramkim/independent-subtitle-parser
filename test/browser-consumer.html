@@ -3,6 +3,7 @@
 <iframe id="demo" src="/examples/browser.html" title="Installed browser example" style="width:100%;height:650px"></iframe>
 <script type="module">
 import { startParse } from '/examples/worker-client.mjs';
+import { parse } from '/dist/index.js';
 const frame = document.querySelector('#demo');
 const checks = [];
 const assert = (value, message) => { if (!value) throw Error(message); };
@@ -11,6 +12,15 @@ const wait = async (condition, label) => {
   while (!condition()) { if (performance.now() > until) throw Error('Timed out: ' + label); await new Promise(r => setTimeout(r, 20)); }
 };
 try {
+  const ass = parse('[Events]\nFormat: Start, End, Text\nDialogue: 1:2:3.04,1:2:4.05,hello', {format:'ass'});
+  assert(ass.cues[0]?.start===3723040 && ass.cues[0]?.end===3724050 && ass.diagnostics.some(d=>d.code==='ASS_TIME_WIDTH_RECOVERED'),'unpadded ASS clocks');
+  checks.push('ASS unpadded minute/second recovery and diagnostic');
+  const kinds = parse('<SAMI><STYLE>.EN {SAMI_Type: CC}.KO {SAMIType: CC}</STYLE><SYNC Start=0><P Class=EN>A<P Class=KO>B</SAMI>');
+  assert(kinds.tracks.length===2 && kinds.tracks.every(t=>t.kind==='CC'),'SAMI kind aliases');
+  checks.push('SAMI legacy and canonical track kind aliases');
+  const speaker = parse('<SAMI><SYNC Start=0><P ID=Source>A<P>B<SYNC Start=1000><P ID=SOURCE>C<P>D</SAMI>');
+  assert(speaker.diagnostics.filter(d=>d.code==='SAMI_SOURCE_ID_UNAPPLIED').length===1 && speaker.cues[0]?.text==='A\nB','Source ID disclosure');
+  checks.push('SAMI Source ID projection and one-time disclosure');
   await new Promise(resolve => { if (frame.contentDocument.readyState === 'complete' && frame.contentDocument.querySelector('#sample')) resolve(); else frame.addEventListener('load', resolve, { once:true }); });
   const doc = frame.contentDocument, win = frame.contentWindow;
   const $ = id => doc.getElementById(id);

@@ -1,0 +1,1484 @@
+{
+  "basis": "Authored before candidate evaluation. This is fixture transcription, not majority voting or renderer conformance.",
+  "records": [
+    {
+      "id": "libjass/tests/unit/1.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1C2B39&\\3c&H1E637A&\\bord0\\blur1.8\\pos(1157,423)}Sociosqu{...ultrices fringilla, tortor sodales interdum aliquam}",
+          "line": 27,
+          "fields": [
+            "1",
+            "0:04:23.70",
+            "0:04:27.95",
+            "sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1E637A&\\3c&H1E637A&\\bord8\\blur4\\pos(1157,423)}Sociosqu",
+          "line": 28,
+          "fields": [
+            "0",
+            "0:04:23.70",
+            "0:04:27.95",
+            "sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 352830,
+          "end": 356280,
+          "text": "Laoreet vestibulum parturient aliquam per!?",
+          "rawText": "{\\fad(500,0)\\frz352.385\\blur2\\pos(549,501)\\c&HAEA2BB&\\b1}Laoreet vestibulum parturient aliquam per!?",
+          "line": 29,
+          "fields": [
+            "0",
+            "0:05:52.83",
+            "0:05:56.28",
+            "sign2",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 75940,
+          "end": 77280,
+          "text": "Eget odio auctor pede porta?",
+          "rawText": "Eget odio auctor pede porta?",
+          "line": 31,
+          "fields": [
+            "0",
+            "0:01:15.94",
+            "0:01:17.28",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 77670,
+          "end": 78520,
+          "text": "Vestibulum.",
+          "rawText": "Vestibulum.",
+          "line": 32,
+          "fields": [
+            "0",
+            "0:01:17.67",
+            "0:01:18.52",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [
+        "Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,"
+      ],
+      "comments": [
+        "Comment: 4,0:00:23.51,0:00:31.57,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Lorem ipsum",
+        "Comment: 4,0:00:31.57,0:00:38.93,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Dolor sit amet, libero magna pellentesque",
+        "Comment: 4,0:00:38.93,0:00:55.24,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Morbi wisi risus urna aenean eget tincidunt"
+      ]
+    },
+    {
+      "id": "libjass/tests/unit/2.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 646460,
+          "end": 652130,
+          "text": "Sapien rhoncus, suscipit posuere in nunc pellentesque",
+          "rawText": "{\\fad(200,0)}Sapien rhoncus, suscipit posuere in nunc pellentesque",
+          "line": 35,
+          "fields": [
+            "0",
+            "0:10:46.46",
+            "0:10:52.13",
+            "op trans",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 652130,
+          "end": 658820,
+          "text": "Orci ipsum. Et nunc varius morbi tincidunt urna",
+          "rawText": "{}Orci ipsum. Et nunc varius morbi tincidunt urna",
+          "line": 36,
+          "fields": [
+            "0",
+            "0:10:52.13",
+            "0:10:58.82",
+            "op trans",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 658820,
+          "end": 664020,
+          "text": "Justo sagittis nisl ut non elit leo, aliquam id",
+          "rawText": "{}Justo sagittis nisl ut non elit leo, aliquam id",
+          "line": 37,
+          "fields": [
+            "0",
+            "0:10:58.82",
+            "0:11:04.02",
+            "op trans",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 646460,
+          "end": 646660,
+          "text": "id maecenas mi in ut varius nunc",
+          "rawText": "{\\fad(200,0)(\\pos(640,33)\\alpha&H00&\\blur2}id maecenas mi in ut varius nunc",
+          "line": 38,
+          "fields": [
+            "0",
+            "0:10:46.46",
+            "0:10:46.66",
+            "op kara",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            "fx"
+          ]
+        },
+        {
+          "start": 646660,
+          "end": 646860,
+          "text": "id maecenas mi in ut varius nunc",
+          "rawText": "{(\\pos(643,30)\\alpha&H00&\\blur2}id maecenas mi in ut varius nunc",
+          "line": 39,
+          "fields": [
+            "0",
+            "0:10:46.66",
+            "0:10:46.86",
+            "op kara",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            "fx"
+          ]
+        },
+        {
+          "start": 646860,
+          "end": 647060,
+          "text": "id maecenas mi in ut varius nunc",
+          "rawText": "{(\\pos(637,37)\\alpha&H00&\\blur1\\bord1}id maecenas mi in ut varius nunc",
+          "line": 40,
+          "fields": [
+            "0",
+            "0:10:46.86",
+            "0:10:47.06",
+            "op kara",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            "fx"
+          ]
+        },
+        {
+          "start": 3370,
+          "end": 7940,
+          "text": "Sed arcu non wisi sed\nante nisl pede aliquam",
+          "rawText": "Sed arcu non wisi sed\\Nante nisl pede aliquam",
+          "line": 41,
+          "fields": [
+            "0",
+            "0:00:03.37",
+            "0:00:07.94",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 8670,
+          "end": 9280,
+          "text": "Porta.",
+          "rawText": "Porta.",
+          "line": 42,
+          "fields": [
+            "0",
+            "0:00:08.67",
+            "0:00:09.28",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 12020,
+          "end": 16020,
+          "text": "Accumsan ac facilisi, aenean mi,",
+          "rawText": "Accumsan ac facilisi, aenean mi,",
+          "line": 43,
+          "fields": [
+            "0",
+            "0:00:12.02",
+            "0:00:16.02",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": [
+        "Comment: 1,0:22:20.06,0:22:20.06,Default,,0000,0000,0000,,{\\blur1.2\\fad(250,300)}Viverra",
+        "Comment: 1,0:22:20.06,0:22:20.06,Default,,0000,0000,0000,,{\\blur1.2\\fad(250,300)}Turpis"
+      ]
+    },
+    {
+      "id": "libjass/tests/unit/3.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1C2B39&\\3c&H1E637A&\\bord0\\blur1.8\\pos(1157,423)}Sociosqu{...ultrices fringilla, tortor sodales interdum aliquam}",
+          "line": 28,
+          "fields": [
+            "1",
+            "0:04:23.70",
+            "0:04:27.95",
+            "sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1E637A&\\3c&H1E637A&\\bord8\\blur4\\pos(1157,423)}Sociosqu",
+          "line": 29,
+          "fields": [
+            "0",
+            "0:04:23.70",
+            "0:04:27.95",
+            "sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 352830,
+          "end": 356280,
+          "text": "Laoreet vestibulum parturient aliquam per!?",
+          "rawText": "{\\fad(500,0)\\frz352.385\\blur2\\pos(549,501)\\c&HAEA2BB&\\b1}Laoreet vestibulum parturient aliquam per!?",
+          "line": 30,
+          "fields": [
+            "0",
+            "0:05:52.83",
+            "0:05:56.28",
+            "sign2",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 75940,
+          "end": 77280,
+          "text": "Eget odio auctor pede porta?",
+          "rawText": "Eget odio auctor pede porta?",
+          "line": 32,
+          "fields": [
+            "0",
+            "0:01:15.94",
+            "0:01:17.28",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 77670,
+          "end": 78520,
+          "text": "Vestibulum.",
+          "rawText": "Vestibulum.",
+          "line": 33,
+          "fields": [
+            "0",
+            "0:01:17.67",
+            "0:01:18.52",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [
+        "Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,"
+      ],
+      "comments": [
+        "Comment: 4,0:00:23.51,0:00:31.57,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Lorem ipsum",
+        "Comment: 4,0:00:31.57,0:00:38.93,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Dolor sit amet, libero magna pellentesque",
+        "Comment: 4,0:00:38.93,0:00:55.24,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Morbi wisi risus urna aenean eget tincidunt"
+      ]
+    },
+    {
+      "id": "libjass/tests/unit/4.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 75940,
+          "end": 77280,
+          "text": "Eget odio auctor pede porta?",
+          "rawText": "Eget odio auctor pede porta?",
+          "line": 22,
+          "fields": [
+            "0",
+            "0:01:15.94",
+            "0:01:17.28",
+            "default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/unit/5.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 75940,
+          "end": 77280,
+          "text": "Eget odio auctor pede porta?",
+          "rawText": "Eget odio auctor pede porta?",
+          "line": 22,
+          "fields": [
+            "0",
+            "0:01:15.94",
+            "0:01:17.28",
+            "default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/unit/6.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1C2B39&\\3c&H1E637A&\\bord0\\blur1.8\\pos(1157,423)}Sociosqu{...ultrices fringilla, tortor sodales interdum aliquam}",
+          "line": 23,
+          "fields": [
+            "1",
+            "0:04:23.70",
+            "0:04:27.95",
+            "*sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 75940,
+          "end": 77280,
+          "text": "Eget odio auctor pede porta?",
+          "rawText": "Eget odio auctor pede porta?",
+          "line": 24,
+          "fields": [
+            "0",
+            "0:01:15.94",
+            "0:01:17.28",
+            "*Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/unit/7.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1C2B39&\\3c&H1E637A&\\bord0\\blur1.8\\pos(1157,423)}Sociosqu{...ultrices fringilla, tortor sodales interdum aliquam}",
+          "line": 26,
+          "fields": [
+            "1",
+            "0:04:23.70",
+            "0:04:27.95",
+            "sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 263700,
+          "end": 267950,
+          "text": "Sociosqu",
+          "rawText": "{\\c&H1E637A&\\3c&H1E637A&\\bord8\\blur4\\pos(1157,423)}Sociosqu",
+          "line": 27,
+          "fields": [
+            "0",
+            "0:04:23.70",
+            "0:04:27.95",
+            "sign1",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 352830,
+          "end": 356280,
+          "text": "Laoreet vestibulum parturient aliquam per!?",
+          "rawText": "{\\fad(500,0)\\frz352.385\\blur2\\pos(549,501)\\c&HAEA2BB&\\b1}Laoreet vestibulum parturient aliquam per!?",
+          "line": 28,
+          "fields": [
+            "0",
+            "0:05:52.83",
+            "0:05:56.28",
+            "sign2",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 75940,
+          "end": 77280,
+          "text": "Eget odio auctor pede porta?",
+          "rawText": "Eget odio auctor pede porta?",
+          "line": 30,
+          "fields": [
+            "0",
+            "0:01:15.94",
+            "0:01:17.28",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 77670,
+          "end": 78520,
+          "text": "Vestibulum.",
+          "rawText": "Vestibulum.",
+          "line": 31,
+          "fields": [
+            "0",
+            "0:01:17.67",
+            "0:01:18.52",
+            "Default",
+            "",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [
+        "Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,"
+      ],
+      "comments": [
+        "Comment: 4,0:00:23.51,0:00:31.57,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Lorem ipsum",
+        "Comment: 4,0:00:31.57,0:00:38.93,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Dolor sit amet, libero magna pellentesque",
+        "Comment: 4,0:00:38.93,0:00:55.24,OP,,0000,0000,0000,,{\\blur3\\fad(200,200)}Morbi wisi risus urna aenean eget tincidunt"
+      ]
+    },
+    {
+      "id": "libjass/tests/functional/alpha/alpha.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 600000,
+          "text": "X",
+          "rawText": "X",
+          "line": 18,
+          "fields": [
+            "0",
+            "0:00:00.00",
+            "0:10:00.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/fr/frz.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "MM\nMM",
+          "rawText": "{\\an1\\frz45}MM\\NMM",
+          "line": 18,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "MM\nMM",
+          "rawText": "{\\an2\\frz45}MM\\NMM",
+          "line": 19,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "MM\nMM",
+          "rawText": "{\\an3\\frz45}MM\\NMM",
+          "line": 20,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "MM\nMM",
+          "rawText": "{\\an7\\frz45}MM\\NMM",
+          "line": 21,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "MM\nMM",
+          "rawText": "{\\an8\\frz45}MM\\NMM",
+          "line": 22,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "MM\nMM",
+          "rawText": "{\\an9\\frz45}MM\\NMM",
+          "line": 23,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 2000,
+          "text": "MM\nMM",
+          "rawText": "{\\an1\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 24,
+          "fields": [
+            "1",
+            "0:00:01.00",
+            "0:00:02.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 2000,
+          "end": 3000,
+          "text": "MM\nMM",
+          "rawText": "{\\an2\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 25,
+          "fields": [
+            "1",
+            "0:00:02.00",
+            "0:00:03.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 3000,
+          "end": 4000,
+          "text": "MM\nMM",
+          "rawText": "{\\an3\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 26,
+          "fields": [
+            "1",
+            "0:00:03.00",
+            "0:00:04.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 4000,
+          "end": 5000,
+          "text": "MM\nMM",
+          "rawText": "{\\an4\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 27,
+          "fields": [
+            "1",
+            "0:00:04.00",
+            "0:00:05.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 5000,
+          "end": 6000,
+          "text": "MM\nMM",
+          "rawText": "{\\an5\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 28,
+          "fields": [
+            "1",
+            "0:00:05.00",
+            "0:00:06.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 6000,
+          "end": 7000,
+          "text": "MM\nMM",
+          "rawText": "{\\an6\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 29,
+          "fields": [
+            "1",
+            "0:00:06.00",
+            "0:00:07.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 7000,
+          "end": 8000,
+          "text": "MM\nMM",
+          "rawText": "{\\an7\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 30,
+          "fields": [
+            "1",
+            "0:00:07.00",
+            "0:00:08.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 8000,
+          "end": 9000,
+          "text": "MM\nMM",
+          "rawText": "{\\an8\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 31,
+          "fields": [
+            "1",
+            "0:00:08.00",
+            "0:00:09.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 9000,
+          "end": 10000,
+          "text": "MM\nMM",
+          "rawText": "{\\an9\\pos(640,360)\\frz45}MM\\NMM",
+          "line": 32,
+          "fields": [
+            "1",
+            "0:00:09.00",
+            "0:00:10.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/fsc/fsc.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 600000,
+          "text": "xxxxxxxxxxxx",
+          "rawText": "xxx{\\fscx50}xxx{\\fscx\\fscy50}xxx{\\fscx50\\fscy50}xxx",
+          "line": 18,
+          "fields": [
+            "0",
+            "0:00:00.00",
+            "0:10:00.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/kfx/kfx.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 1000,
+          "end": 7000,
+          "text": "abcd",
+          "rawText": "{\\k100}{\\k200}a{\\k100}bc{\\k200}d",
+          "line": 18,
+          "fields": [
+            "0",
+            "0:00:01.00",
+            "0:00:07.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/outlines/outlines.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "test",
+          "rawText": "test",
+          "line": 20,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 2000,
+          "text": "test",
+          "rawText": "test",
+          "line": 21,
+          "fields": [
+            "1",
+            "0:00:01.00",
+            "0:00:02.00",
+            "Default2",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 2000,
+          "end": 3000,
+          "text": "test",
+          "rawText": "{\\alpha&9E&}test",
+          "line": 22,
+          "fields": [
+            "1",
+            "0:00:02.00",
+            "0:00:03.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 2000,
+          "end": 3000,
+          "text": "test",
+          "rawText": "test",
+          "line": 23,
+          "fields": [
+            "1",
+            "0:00:02.00",
+            "0:00:03.00",
+            "Default3",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 3000,
+          "end": 4000,
+          "text": "test",
+          "rawText": "{\\alpha&9E&}test",
+          "line": 24,
+          "fields": [
+            "1",
+            "0:00:03.00",
+            "0:00:04.00",
+            "Default2",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 3000,
+          "end": 4000,
+          "text": "test",
+          "rawText": "test",
+          "line": 25,
+          "fields": [
+            "1",
+            "0:00:03.00",
+            "0:00:04.00",
+            "Default3",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/outlines/subpixel.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "test1",
+          "rawText": "test1",
+          "line": 20,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "test1",
+          "rawText": "test1",
+          "line": 21,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default2",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 2000,
+          "text": "test2",
+          "rawText": "test2",
+          "line": 22,
+          "fields": [
+            "1",
+            "0:00:01.00",
+            "0:00:02.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 2000,
+          "text": "test2",
+          "rawText": "test2",
+          "line": 23,
+          "fields": [
+            "1",
+            "0:00:01.00",
+            "0:00:02.00",
+            "Default3",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/r/alpha.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 1000,
+          "text": "abcd",
+          "rawText": "a{\\alpha&00&}b{\\rDefault2}c{\\alpha&D0&}d",
+          "line": 19,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:01.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "libjass/tests/functional/t/alpha.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 0,
+          "end": 7000,
+          "text": "test",
+          "rawText": "{\\t(2000,5000,\\alpha&6F&)}test",
+          "line": 18,
+          "fields": [
+            "1",
+            "0:00:00.00",
+            "0:00:7.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 900,
+          "end": 1100,
+          "text": "test",
+          "rawText": "{\\alpha&0F&)}test",
+          "line": 19,
+          "fields": [
+            "1",
+            "0:00:00.90",
+            "0:00:01.10",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 1900,
+          "end": 2100,
+          "text": "test",
+          "rawText": "{\\alpha&0F&)}test",
+          "line": 20,
+          "fields": [
+            "1",
+            "0:00:01.90",
+            "0:00:02.10",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 2900,
+          "end": 3100,
+          "text": "test",
+          "rawText": "{\\alpha&2F&)}test",
+          "line": 21,
+          "fields": [
+            "1",
+            "0:00:02.90",
+            "0:00:03.10",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 3900,
+          "end": 4100,
+          "text": "test",
+          "rawText": "{\\alpha&4F&)}test",
+          "line": 22,
+          "fields": [
+            "1",
+            "0:00:03.90",
+            "0:00:04.10",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 4900,
+          "end": 5100,
+          "text": "test",
+          "rawText": "{\\alpha&6F&)}test",
+          "line": 23,
+          "fields": [
+            "1",
+            "0:00:04.90",
+            "0:00:05.10",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 5900,
+          "end": 6100,
+          "text": "test",
+          "rawText": "{\\alpha&6F&)}test",
+          "line": 24,
+          "fields": [
+            "1",
+            "0:00:05.90",
+            "0:00:06.10",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "subtitler/examples/example.smi",
+      "basis": "Literal source transcription; a missing class does not clear another language; final end unknown.",
+      "tracks": [
+        [
+          "ENCC",
+          "English",
+          "en-US",
+          "CC"
+        ],
+        [
+          "KRCC",
+          "Korean",
+          "ko-KR",
+          "CC"
+        ]
+      ],
+      "cues": [
+        [
+          1000,
+          3500,
+          "Welcome to SAMI subtitle example",
+          "ENCC"
+        ],
+        [
+          3500,
+          6000,
+          "This format is widely used in Asia",
+          "ENCC"
+        ],
+        [
+          6000,
+          11000,
+          "Especially in Korean and Chinese markets",
+          "ENCC"
+        ],
+        [
+          9000,
+          null,
+          "안녕하세요",
+          "KRCC"
+        ],
+        [
+          11000,
+          14000,
+          "SAMI supports multi-language subtitles",
+          "ENCC"
+        ],
+        [
+          14000,
+          16500,
+          "And HTML-like styling",
+          "ENCC"
+        ],
+        [
+          16500,
+          null,
+          "Thank you for watching!",
+          "ENCC"
+        ]
+      ]
+    },
+    {
+      "id": "subtitleedit/test.ass",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 1000,
+          "end": 4000,
+          "text": "Hello, World!",
+          "rawText": "Hello, World!",
+          "line": 14,
+          "fields": [
+            "0",
+            "0:00:01.00",
+            "0:00:04.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 5000,
+          "end": 8000,
+          "text": "This is a test subtitle.",
+          "rawText": "This is a test subtitle.",
+          "line": 15,
+          "fields": [
+            "0",
+            "0:00:05.00",
+            "0:00:08.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        },
+        {
+          "start": 10000,
+          "end": 13000,
+          "text": "Testing SeConv subtitle converter.",
+          "rawText": "Testing SeConv subtitle converter.",
+          "line": 16,
+          "fields": [
+            "0",
+            "0:00:10.00",
+            "0:00:13.00",
+            "Default",
+            "",
+            "0",
+            "0",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    },
+    {
+      "id": "subtitleedit/test.ssa",
+      "basis": "Source Dialogue lines; h*3600000+m*60000+s*1000+cs*10; overrides nonspoken, hard breaks preserved. Nonpositive intervals retained as rejected metadata by the documented package policy.",
+      "cues": [
+        {
+          "start": 1000,
+          "end": 4000,
+          "text": "Hello, World!",
+          "rawText": "Hello, World!",
+          "line": 14,
+          "fields": [
+            "Marked=0",
+            "0:00:01.00",
+            "0:00:04.00",
+            "*Default",
+            "NTP",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 5000,
+          "end": 8000,
+          "text": "This is a test subtitle.",
+          "rawText": "This is a test subtitle.",
+          "line": 15,
+          "fields": [
+            "Marked=0",
+            "0:00:05.00",
+            "0:00:08.00",
+            "*Default",
+            "NTP",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        },
+        {
+          "start": 10000,
+          "end": 13000,
+          "text": "Testing SeConv subtitle converter.",
+          "rawText": "Testing SeConv subtitle converter.",
+          "line": 16,
+          "fields": [
+            "Marked=0",
+            "0:00:10.00",
+            "0:00:13.00",
+            "*Default",
+            "NTP",
+            "0000",
+            "0000",
+            "0000",
+            ""
+          ]
+        }
+      ],
+      "rejected": [],
+      "comments": []
+    }
+  ]
+}

@@ -278,6 +278,7 @@ export function parseSami(lines: string[], ctx: ParseContext): void {
   let capture: { name: string; start: number; contentStart: number } | null = null;
   let sawRoot = false;
   let sawSync = false;
+  let warnedSourceId = false;
   let previousStart: number | null = null;
   let strayStart: number | null = null;
   const finishParagraph = (end: number): void => {
@@ -366,7 +367,7 @@ export function parseSami(lines: string[], ctx: ParseContext): void {
         for (const field of rule.fields) {
           if (field.name === 'name') label = field.value;
           else if (field.name === 'lang') language = field.value;
-          else if (field.name === 'samitype') kind = field.value;
+          else if (field.name === 'samitype' || field.name === 'sami_type') kind = field.value;
         }
         for (const selector of rule.selector.split(',')) {
           const match = /^(?:p)?\.([^\s.#:[\]>+~(),]+)$/i.exec(selector.trim());
@@ -429,6 +430,10 @@ export function parseSami(lines: string[], ctx: ParseContext): void {
         continue;
       }
       const className = first(tag.fields, 'class')?.trim() ?? '';
+      if (!warnedSourceId && first(tag.fields, 'id')?.trim().toLowerCase() === 'source') {
+        warnedSourceId = true;
+        ctx.diagnostic('SAMI_SOURCE_ID_UNAPPLIED', 'warning', 'Source ID paragraph text and fields are retained, but persistent speaker state and separate Source ID display are not modeled.', lineAt(tag.start));
+      }
       if (/\s/.test(className)) ctx.diagnostic('SAMI_COMPLEX_CLASS', 'warning', 'A multi-token Class is kept as a distinct track; CSS class-list matching is not implemented.', lineAt(tag.start));
       const duplicateNames = new Set<string>();
       for (const field of tag.fields) {

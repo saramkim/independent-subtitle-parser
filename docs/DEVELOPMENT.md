@@ -1,5 +1,10 @@
 # Development and local evidence
 
+The current [ASS/SSA/SAMI corpus workflow](CORPUS-016.md) includes optional local
+downloads, independent oracles, comparison and expanded fuzzing. Local transcripts
+stay excluded from Git/npm. `scripts/validate.mjs` fingerprints the new research
+scripts as well as the runtime, tests and public corpus.
+
 These instructions apply to a source checkout. npm consumers should start with
 the [README](../README.md); test sources and evidence are not in the tarball.
 

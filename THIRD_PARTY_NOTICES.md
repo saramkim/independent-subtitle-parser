@@ -8,6 +8,15 @@ URLs and hashes in that directory's manifest. These fixtures are not in the
 npm tarball. The external sample/writer provenance and coverage limits are
 documented in `docs/RELEASE.md`.
 
+Development-only `corpus/corpus-016/` adds unchanged authored samples from
+Arnavion/libjass (Apache-2.0), subtitle-rs/subtitler (Apache-2.0), and
+SubtitleEdit/subtitleedit (MIT). Each upstream license is retained alongside
+its samples; `manifest.json` pins revisions, original URLs and SHA-256 hashes.
+No upstream parser implementation, font or image is incorporated. These samples
+and licenses are excluded from the npm tarball. Additional downloaded originals
+with uncertain transcript redistribution rights remain in ignored local caches;
+their metadata alone is in `research/corpus-016/local-manifest.json`.
+
 Development-only corpus: WPT files retain their BSD-3-Clause notice in
 `corpus/wpt/LICENSE.md`. *Tears of Steel* subtitles are attributed to
 **(CC) Blender Foundation | mango.blender.org** and volunteer translators under
