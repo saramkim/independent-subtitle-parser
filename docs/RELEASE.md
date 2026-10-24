@@ -13,14 +13,14 @@ and successful validation are not registry publication or hosted CI results.
 | Repository participation | Bug report form and PR template are tracked in the public source repository |
 | Package verification | Actual tarball install, imports, declarations, examples, local document links, byte identity and reproducible packing |
 | Source repository and reporting endpoints | [saramkim/independent-subtitle-parser](https://github.com/saramkim/independent-subtitle-parser); repository/homepage/bugs metadata connected |
-| Hosted CI | Nine Node 20/22/24 × Windows/Linux/macOS jobs prepared; NOT RUN |
+| Hosted CI | Nine Node 20/22/24 × Windows/Ubuntu/macOS jobs passed; see [recorded run and commit](CI.md) |
 | Current browser matrix | Windows Chromium 156 tested; Firefox/Safari and other OS combinations not revalidated for 0.1.7 |
 | Registry and account | Availability, maintainer identity and publishing permissions must be verified at release time |
 | Publication | Not authorized or performed as part of preparation; private:true remains |
 
-A public repository/reporting destination is configured; hosted CI still requires
-verified runs on the published source revision. No new parser feature is implied by these
-remaining steps. A first 0.x release must describe its tested scope rather than
+A public repository/reporting destination is configured and the first hosted
+matrix passed. Verify the latest release revision independently; prior green
+CI is not npm publication approval. A first 0.x release must describe its tested scope rather than
 claim complete subtitle or renderer conformance.
 
 ## Validate a private candidate

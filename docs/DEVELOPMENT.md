@@ -87,8 +87,9 @@ for changes. Action revisions are pinned, repository permissions are read-only,
 and no npm publication or deployment step is present. Logs and candidate tarballs
 are retained for 14 days when the workflow runs on GitHub.
 
-The workflow is prepared locally. It has not run on hosted runners and does not
-make the unexecuted OS/Node cells pass. It does not automate native-browser tests,
+The workflow runs in the public repository; the first complete nine-job hosted
+matrix is recorded in [CI evidence](CI.md). Check the run for the commit you use.
+It does not automate native-browser tests,
 the one-hour fuzz campaign or the full comparative performance matrix. Routine
 benchmarks are observations, not timing thresholds on shared CI machines.
 

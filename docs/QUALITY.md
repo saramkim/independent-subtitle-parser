@@ -18,11 +18,12 @@ receive fresh artifact checks. Historical results are labeled separately.
 | Comparison | Pinned comparator outputs are adjudicated against independent expectations; raw whitespace/API differences are not automatically rendering defects |
 | Robustness | Current ten-minute seeded campaign: 3,655,680 mutations and 456,960 arithmetic cases; 896 full-size original-file mutations; no observed failures. Historical one-hour 0.1.5 run is not a fresh 0.1.7 run |
 | Performance/memory | Isolated real-file and synthetic command-stream observations, correct cue counts, GC and RSS reporting; additional metadata costs memory and RSS is not bounded by V8 old-space alone |
-| Consumers | Windows Node 20.20.2 and 24.18.0: 412 tests each; Chromium 156: 16 scenarios; actual tarball imports/declarations/examples/links/byte identity checked |
-| Unexecuted targets | Current Firefox, Node 22, Linux, macOS and hosted CI remain NOT RUN. Older Firefox evidence is specifically 0.1.5 |
-| Publication | MIT and provenance documented; public GitHub repository/reporting metadata connected; private:true retained; verified hosted CI and authorized npm publication still pending |
+| Consumers | Hosted Node 20/22/24 on Windows/Ubuntu/macOS: 412 tests in each of nine jobs; local Windows Chromium 156: 16 scenarios; actual tarball imports/declarations/examples/links/byte identity checked |
+| Unexecuted targets | Native Firefox/Safari and browser execution on Linux/macOS have not been revalidated for 0.1.7. Older Firefox evidence is specifically 0.1.5; Node CI does not validate browsers |
+| Publication | MIT and provenance documented; public GitHub repository/reporting metadata connected; first hosted matrix passed; private:true retained and npm publication still requires explicit approval |
 
 See [latest corpus details](CORPUS-017.md) and [earlier corpus methodology](CORPUS.md)
+plus the [hosted CI record](CI.md)
 for sources, dimensions, exclusions and reproduction. Local frozen reports are
 not public download links or files included in a clone; the tracked harnesses
 allow new evidence to be produced. Original files with unclear redistribution

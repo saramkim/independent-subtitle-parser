@@ -145,12 +145,12 @@ bundlers, Worker lifetime and CLI exit codes.
 
 ## Validation and compatibility
 
-The 0.1.7 runtime passed 412 tests on Windows Node 20.20.2 and 24.18.0, plus 16
-Chromium 156 consumer scenarios. Package checks install the actual tarball and
+[Hosted CI](docs/CI.md) passed **412 tests in each of nine jobs**: Node 20, 22 and
+24 on Windows, Ubuntu and macOS. Package checks install the actual tarball and
 check imports, TypeScript declarations, examples and archive byte identity.
-The current runtime has not been revalidated on Firefox, Node 22, Linux or macOS;
-the prepared hosted CI matrix has not run. Supported targets and tested targets
-are different claims.
+Local Chromium 156 also passed 16 consumer scenarios on Windows. The Node CI
+matrix does not certify native browser behavior: the current runtime has not
+been revalidated in Firefox/Safari or in browsers on the other operating systems.
 
 The latest corpus expansion checked 23,889 events in seven real ASS/SSA files
 for timing, raw text and fields; reading text was scored on a restricted 5,107
