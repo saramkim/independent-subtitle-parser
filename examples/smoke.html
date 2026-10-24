@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Independent subtitle parser example</title>
+<h1>Subtitle parser: browser ESM</h1>
+<p>This page uses DOM only as a consumer; the library itself has no DOM dependency.</p>
+<pre id="result">Loading module…</pre>
+<script type="module">
+import { parse, decode, detectFormat } from '../dist/index.js';
+const fixtures = [
+  ['srt', '1\n00:00:01,250 --> 00:00:02,500\n안녕\nHello'],
+  ['vtt', 'WEBVTT\n\n00:01.250 --> 00:02.500\n<v Speaker>こんにちは</v>'],
+  ['sami', '<SAMI><SYNC Start=1250><P Class=KO>안녕<SYNC Start=2500></SAMI>'],
+  ['ass', '[Script Info]\nScriptType: v4.00+\n[Events]\nFormat: Start, End, Text\nDialogue: 0:00:01.25,0:00:02.50,Hello'],
+  ['ssa', '[Script Info]\nScriptType: v4.00\n[Events]\nFormat: Start, End, Text\nDialogue: 0:00:01.25,0:00:02.50,Hello'],
+];
+const checks = fixtures.map(([format, source]) => {
+  const parsed = parse(source);
+  if (parsed.format !== format || parsed.cues.length !== 1 || parsed.cues[0].start !== 1250 || parsed.cues[0].end !== 2500) throw Error(`Failed ${format}`);
+  return { format, cue: parsed.cues[0], diagnostics: parsed.diagnostics };
+});
+if (decode(Uint8Array.of(0xb0, 0xa1), { encoding: 'euc-kr' }).text !== '가') throw Error('Legacy decoder failed');
+if (detectFormat('WEBVTT').format !== 'vtt') throw Error('Detection failed');
+const recovered = parse('WEBVTT\n\n0:00:01.000-->0:00:02.000\nRecovered');
+if (recovered.cues[0]?.start !== 1000 || recovered.status !== 'partial') throw Error('VTT recovery failed');
+const drawing = parse('[Events]\nFormat: Start, End, Text\nDialogue: 0:00:01.00,0:00:02.00,{\\p1}m 0 0{\\p}Spoken', { format: 'ass' });
+if (drawing.cues[0]?.text !== 'Spoken') throw Error('ASS drawing reset failed');
+const bounded = parse('[Events]\nFormat: Start, End, Text\nDialogue: bad,0:00:02.00,x', { format: 'ass', limits: { maxDiagnostics: 1 } });
+if (!bounded.diagnosticsTruncated || bounded.diagnostics[0]?.code !== 'ASS_INVALID_TIME') throw Error('Diagnostic retention failed');
+// DOM exists only in this example to prove real iframe typed-array interoperability.
+const frame = document.createElement('iframe');
+frame.hidden = true;
+document.body.append(frame);
+const foreignBytes = new frame.contentWindow.Uint8Array([72, 105]);
+if (foreignBytes instanceof Uint8Array || decode(foreignBytes).text !== 'Hi') throw Error('Cross-realm decoding failed');
+frame.remove();
+globalThis.subtitleSmoke = { status: 'PASS', checks, improvements: ['VTT recovery', 'ASS drawing reset', 'bounded diagnostics', 'iframe Uint8Array decoding'], userAgent: navigator.userAgent };
+document.querySelector('#result').textContent = JSON.stringify(globalThis.subtitleSmoke, null, 2);
+</script></html>

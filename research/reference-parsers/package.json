@@ -1,0 +1,12 @@
+{
+  "name": "subtitle-parser-reference-probes",
+  "private": true,
+  "type": "module",
+  "description": "Isolated optional reference parsers, never included in the runtime package",
+  "dependencies": {
+    "@plussub/srt-vtt-parser": "2.0.5",
+    "media-captions": "0.0.18",
+    "subtitle": "4.2.2",
+    "webvtt-parser": "2.2.0"
+  }
+}

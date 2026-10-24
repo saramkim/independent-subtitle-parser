@@ -1,0 +1,1772 @@
+{
+  "acquiredAtUtc": "2026-10-23T09:23:57.282Z",
+  "records": [
+    {
+      "path": "blender/download.html",
+      "url": "https://mango.blender.org/download/",
+      "bytes": 61151,
+      "sha256": "8161ddab7a1a0d07cc2d87f11917e9189d48b026c937c5abc920e77966bc1d94",
+      "kind": "provenance"
+    },
+    {
+      "path": "blender/sharing.html",
+      "url": "https://mango.blender.org/sharing/",
+      "bytes": 11331,
+      "sha256": "c3defc0521e16af0a3afb6a96d084517620adf6434038e6a3a2ba1cf50f86947",
+      "kind": "license",
+      "license": "CC-BY-3.0"
+    },
+    {
+      "path": "blender/TOS-CH-traditional.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-CH-traditional.srt",
+      "bytes": 4708,
+      "sha256": "ae2a9ffb2ae2f60762f77ffb1b03bd7246b6bc71cb42d8b30955fcfe66ad0c50",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-CH.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-CH.srt",
+      "bytes": 4945,
+      "sha256": "456152557f85f5874ec7c96c99a68ff05c325013972ca059b193f0d93f036d45",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-Croatian.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-Croatian.srt",
+      "bytes": 4473,
+      "sha256": "743a93583ba89f65fb803e9707bf6a92bdf26b4bb8271efb6ad4930b47a3cd4c",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-CZ.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-CZ.srt",
+      "bytes": 5626,
+      "sha256": "238fdcbdea2764d67deed791791bbeb315f94ee0bffe51a83eaf88910525ba2c",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-Dansk.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-Dansk.srt",
+      "bytes": 4489,
+      "sha256": "4493eefa436082bf11e08b9a53b53d9dea9014cd03dafa3ba68a839232e374ac",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-de.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-de.srt",
+      "bytes": 4851,
+      "sha256": "666685daa9064a5a59144e47bddd2d570bbdda199df6e4e39f3273e479ab1f4b",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-en.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-en.srt",
+      "bytes": 4764,
+      "sha256": "ce9578f6fe098a5821045a38884b229160f9e7ba27890448a92f5be330c6e6fe",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-es.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-es.srt",
+      "bytes": 4948,
+      "sha256": "b1936989cf42eda28988ec9120a80b7303562ea6429e49441160ba688da39a5c",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-fr-Goofy.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-fr-Goofy.srt",
+      "bytes": 4622,
+      "sha256": "493e7d80483479b972f7d3eaf1e5dc062ccc44e37ba544f6efcda7aba12c9930",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-fr-OMenor.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-fr-OMenor.srt",
+      "bytes": 4968,
+      "sha256": "3f0846108d7573822d084804ec4772ddb1a1bd629ab7261fe8a164be486948d8",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-fr-orig.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-fr-orig.srt",
+      "bytes": 4908,
+      "sha256": "94cc887d34c83ee909dfe141edaccc2afc1ae8c23c7929b60e2f73905968c708",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-GK.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-GK.srt",
+      "bytes": 6185,
+      "sha256": "c8afbc54d671bff1c4b961c2e1c952600a11dac2934e6e2e0ef28668d4762315",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-HE.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-HE.srt",
+      "bytes": 6412,
+      "sha256": "b868e12e032ff5bc379995cad5839c9aa4650bac74ffb1d90504680b54e1ad27",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-HU.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-HU.srt",
+      "bytes": 4907,
+      "sha256": "1282657818d7ba65fcdfe179e35bfad556303f0cad4cb83a41a1799c1a81a760",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-Indonesian.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-Indonesian.srt",
+      "bytes": 4500,
+      "sha256": "c5e66ae0e594b8bd236739953a629647010e506c719d17a97027464c6b6944ce",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-it.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-it.srt",
+      "bytes": 4744,
+      "sha256": "6b8f6023b88b16acadea52d1664aa92ef132d7481e3e1957f1f334260477c870",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-JP.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-JP.srt",
+      "bytes": 4965,
+      "sha256": "dae49f0d9231c93a3ca02f02ab08023a4e5379aa8dfa9e22f78bc40d8754ad74",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-nl.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-nl.srt",
+      "bytes": 4534,
+      "sha256": "1146fe8a924306d680d9b7c82cf652e56e9f1ed28c81142fa477daee04b45b58",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-no.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-no.srt",
+      "bytes": 9854,
+      "sha256": "e8ba243d2927ef7d2751f3e6fd522669a0a7201ae2c501d12fa51b4353791c8c",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-Persian.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-Persian.srt",
+      "bytes": 5286,
+      "sha256": "0413564767bfc85450bced812650df5bb239b23301fca53d7e8797e2893ac02e",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-PL-please-review.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-PL-please-review.srt",
+      "bytes": 4770,
+      "sha256": "abb6269063a727176b3b829166a4a002546fa7b7efef52e541b3c8b0c81d23c3",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-PT-BR.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-PT-BR.srt",
+      "bytes": 4686,
+      "sha256": "4d1edfdb5c370297701efb29e8296137ba766a8f61af3625bc09fca188a1fdad",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-PT-PT.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-PT-PT.srt",
+      "bytes": 4686,
+      "sha256": "4d1edfdb5c370297701efb29e8296137ba766a8f61af3625bc09fca188a1fdad",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "blender/TOS-ru.srt",
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-ru.srt",
+      "bytes": 5929,
+      "sha256": "3fcb17b4671bcc6f3b92c823eeeab134234e739cd8878ed5a4c1ab56b320829c",
+      "kind": "real-file",
+      "format": "srt",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel volunteer translators",
+      "modifications": "none"
+    },
+    {
+      "path": "wpt/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/LICENSE.md",
+      "bytes": 1500,
+      "sha256": "5fac07febb0e2a97fb0d7b0def149ec08b642e1ba4b9c345283ab1cbd2af6570",
+      "kind": "license",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/common.js",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/common.js",
+      "bytes": 6994,
+      "sha256": "30071d3cd086e2d3ccc38fe375840f6189fead970a12119a77cd8403250bb04d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "c72bdc06d9197deba00ec6c8dc699078331f244c",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/dat/entities.dat",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/dat/entities.dat",
+      "bytes": 1242,
+      "sha256": "e2c5e57848249afe98b05c67049773cff2d749b9efffd8df7c7674b7034cba40",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6522e3f5b8d1b5b28336ca7b27ae0081fc798910",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/dat/tags.dat",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/dat/tags.dat",
+      "bytes": 1938,
+      "sha256": "427632cdc562cc463efb90c16ec622cca7217746196d75836a279f336bb34f9d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "0ef77a09a157ca2c0a0162eb5dec99a0b98d7c23",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/dat/text.dat",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/dat/text.dat",
+      "bytes": 284,
+      "sha256": "480cd34cac200ab7e263bd34a86576e24e36e5cb5cd31ad4f38ce2c8498aee1f",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e4129a2ec944e19434784e366bedf719fd92ac09",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/dat/timestamps.dat",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/dat/timestamps.dat",
+      "bytes": 737,
+      "sha256": "9c0dd1b8d75a050d9c790537d7e0a4f5a8b87750be11403e64e1745d42b6a545",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "a3aea9af6c22819507e7a20654e850817f07cf06",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/dat/tree-building.dat",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/dat/tree-building.dat",
+      "bytes": 1207,
+      "sha256": "706d81da28994ab09baa9fe11042900fad0029d2e05a0fdf082959e319123159",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "d9b98b7e6ce07081a203d89699a1474002170d02",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/entities-trusted-types.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/entities-trusted-types.html",
+      "bytes": 711,
+      "sha256": "23b72e4057b03b43cd0ec724b820315fa01caeac4e6d49944859df5f0943830e",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "b894a19fd55d0ba2395cc9c197b550828e5b811c",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/entities.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/entities.html",
+      "bytes": 3623,
+      "sha256": "b27c78c7c22a4c20af4ec5f8ae92eec958c186f35092d3193f0d75d4373ada89",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4c068533683e5038238f154c6e9c9f83c2c0623e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/tags.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/tags.html",
+      "bytes": 5197,
+      "sha256": "2c6b69af416531a9680b732e0b08bf2e51610825e43970a6db4410bcd07b2c43",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "792398dedb01d58c13d781ddfb516f2dbe40d341",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/text.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/text.html",
+      "bytes": 1139,
+      "sha256": "4ad25f6c4975adedd1d76607c1938b0ec107db07215b6aebbaaf9f71c2299aa7",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "0ed40a77eebc26c98b9349fd1a2fadea44538e02",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/timestamps.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/timestamps.html",
+      "bytes": 2076,
+      "sha256": "6ec84c4dc48232def6c1fb6fd1332915ed564092908122e7f6ca5cfcba1712ff",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "dfe26458a724ec361c5deabf836ac513bf18f936",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/tree-building.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/tree-building.html",
+      "bytes": 3218,
+      "sha256": "91c69708ef10698f63bdc0e392d2c653f533a250304969289aa8b71c27ce71a1",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "d5fe93c64ed84480fec908e30ef75d304b3eb6c6",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/cue-text-parsing/tests/WEB_FEATURES.yml",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/cue-text-parsing/tests/WEB_FEATURES.yml",
+      "bytes": 24,
+      "sha256": "6dceeabca32c7d407d8a93202b1d9aa9c729e229b54f771b2d4e0a70db87677b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ae84765d8022d56a02155949bef9dfa3ac829f99",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/categories.json",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/categories.json",
+      "bytes": 125,
+      "sha256": "b7146695ad477b7dc5d7411082eb0a36c06b035c74f757f6842018bab601426c",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e78106cee1ed0af79a1c4d0d48cb35a676caa4aa",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/README.md",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/README.md",
+      "bytes": 1154,
+      "sha256": "820898dbd4ff4380b614e072aa00ec05e2cfd239bb5ee4f9d2e290a5c3d7da2c",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4cff0af95209d9744311e497aad2dd76c4f4dd95",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/signature-invalid.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/signature-invalid.html",
+      "bytes": 1764,
+      "sha256": "fdc9fd449bd376dabd14e9ccfa7efa108640a4e8f1b41342f76982b83c5de143",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "62ee90828f9843cdb8c562a123dbf6b3fe32d90b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/arrows.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/arrows.test",
+      "bytes": 641,
+      "sha256": "cd18585ca662a1deee4cf8beb3a742f9a242bb1486dabf0fe353cdc5a8ab41cf",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "72207a241704de2244f88f3de4e2fa72e17ee8d0",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/comment-in-cue-text.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/comment-in-cue-text.test",
+      "bytes": 635,
+      "sha256": "056085738e6aca94c980c82816f860050f60613bffc0b9d4f6cc93d62180448c",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "38e4b9f16e47227b825c9d7535784459b4ec7a1d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/empty.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/empty.vtt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/header-garbage.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/header-garbage.test",
+      "bytes": 290,
+      "sha256": "6bafe371f1402ef2c5af491283f982a4031dd264c3736156505aa9ecff8ce22b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "a8714aae91a7cff2a76078b33d75872361307595",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/header-space.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/header-space.test",
+      "bytes": 285,
+      "sha256": "e4dc6f2a5b7060eaf18daf3975c074a14cfcc07996c2f99031f74fa6cc7e260c",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3b2fa7dc90d50608569953de9f3f72b61299e426",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/header-tab.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/header-tab.test",
+      "bytes": 282,
+      "sha256": "eb9ba38c4994de3e7603848000847050872a075568f2033e411cde33120e8c04",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "91892d614ab646db4b1a6968b80d1d9dabb73b39",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/header-timings.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/header-timings.test",
+      "bytes": 282,
+      "sha256": "303b363546d4ee06b6ad125a256e4b07a02b15fcfdd3d867bf197f7595f37420",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "c3348e43f8448dd8bc9c216fea0dfdbeb52e069d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/ids.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/ids.test",
+      "bytes": 552,
+      "sha256": "3a0ea7d4a6b6f368d82b573c568734d33f997e3da453b1e0a779b9f5dbc819f4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "135f1c6abc7630e8e47e0be6ecd41368e1016c33",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/newlines.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/newlines.test",
+      "bytes": 650,
+      "sha256": "1ec31449aafc965d38b5f2138b7d8f84ebf21e33bbae959208b824dc2e789280",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "2d10536b68e229953c2ebf784ae2ce0464e07c75",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/nulls.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/nulls.test",
+      "bytes": 3706,
+      "sha256": "c3fcc670ae74387d9503fc2674f4ee682f47d95f36cae77112468c36e4c824af",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "02450ce5c4347dd4196e54c5048e5b7527b62b8a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/regions-id.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/regions-id.test",
+      "bytes": 791,
+      "sha256": "153c172f8fe343e7b298c687513b80aed80de164920b5a24b97eb2ddcd99247d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "b611f84371bf6cd0c11ed973f24216f17bf318ba",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/regions-lines.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/regions-lines.test",
+      "bytes": 1395,
+      "sha256": "dad49e7b160cc7a6e9d2b279c68f10990ca21913617b3938611bdeb8fe88937c",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6c0e02e3ade6f5910cddba8ded540a8350e7a1f2",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/regions-old.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/regions-old.test",
+      "bytes": 490,
+      "sha256": "258e3fa74dc4495bbfab728b678025d0c02b89aa38f897fe5902126aa84c3af1",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4acb54b262c4e7a19f5aa684ef7ab0f206d9310e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/regions-regionanchor.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/regions-regionanchor.test",
+      "bytes": 2697,
+      "sha256": "c1cba27ec78641c920e5026a301623b67582697bbc302bc148bc93812e34bf70",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "0b0a896e2024ac987b194e99a16a7412ee21bea8",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/regions-scroll.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/regions-scroll.test",
+      "bytes": 1014,
+      "sha256": "4b6e1b9c2f4e070f27feeccf6c20490b4394b404a5eb5119984c2a8764b53c53",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f4b27800dd9f5a1ae151bc4d59bd573133faadae",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/regions-viewportanchor.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/regions-viewportanchor.test",
+      "bytes": 2755,
+      "sha256": "9a7563bbdfb48438bf85eaffa0a0cdcaef6a869a82d2c71d14e9450c7766ec3a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "c63816d0c45540b3cff205f028908d554890f56e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-align.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-align.test",
+      "bytes": 11108,
+      "sha256": "0a5d42f755ef87f499ead52063a14badcf2a62e17ac542607c5caae9ac212768",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ec5618a64b9f7a3ebd0e761e2474e62237e8ed4e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-line.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-line.test",
+      "bytes": 7449,
+      "sha256": "fccc6bd175049c07ac3482ca2f193554e732cdb2c70d5dfb325b801367654c90",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6b702e624be8ede13813233f2432426422d37b97",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-multiple.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-multiple.test",
+      "bytes": 876,
+      "sha256": "2c6d2dc75dd51f8d44f6788206aecf46f08fe7b65c9649dbac2948d53e0bf9c4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "2aa7dc1624da3559cdf5fa066542080017f08a12",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-position.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-position.test",
+      "bytes": 2551,
+      "sha256": "ed814e1c867ae9ba56dc0e81dd43f0f3806dfa4be10a4d85c7225a72271d53e7",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "01fee14aac247ddce81be2fbbb3c79dda6adbfc7",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-region.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-region.test",
+      "bytes": 1250,
+      "sha256": "c24e10bd02e1b7ffa83a3cc3db110b84b67f14d1c9fd1884e88af9614c953ed4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "bfd0434e767482193876b402f8e9f8298509824b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-size.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-size.test",
+      "bytes": 1308,
+      "sha256": "625621e8de549f9f7dc77deab558172cc382f6a534954379bee222fea766824d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4c2de1d5f2f67a6043f43efb9901cc93dcd2bf40",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/settings-vertical.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/settings-vertical.test",
+      "bytes": 909,
+      "sha256": "fa1f6b9a242e347bd3b036a5b40fdff2f5b12852c53d54ebf73286f0fe7e74b7",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "33d23b2c4607b932d0356a5c10a0aea491a486cf",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-bom.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-bom.test",
+      "bytes": 144,
+      "sha256": "67972c42d78223174556e5efd28f9855bc7f29c7020707342eba97333e2c1945",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "245385f572d7b8a96ed30c3322334b51e965add8",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-formfeed.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-formfeed.vtt",
+      "bytes": 8,
+      "sha256": "a12a7681fb26bdb114efad57eb615ec0f042591051270837b13e92140967773d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "0ba528637315216c732ffbb2538c9535b14ae506",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-invalid-whitespace.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-invalid-whitespace.vtt",
+      "bytes": 12,
+      "sha256": "0664f525b06ec4659d2d110e5cbc492e4821dd246f644b65e01e3793e488e855",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "1f67eaee97310a0ae634e2b179f9650c36513d6b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-invalid.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-invalid.vtt",
+      "bytes": 7,
+      "sha256": "d4832295f3ad7b9a95a3b98cc34dbe0c44404a5fc8429ffd46141a5390c2e455",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "5407fcb350513e2b3f1c8b3eacf6029a45dc9ea0",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-lowercase.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-lowercase.vtt",
+      "bytes": 7,
+      "sha256": "1e1358c1aa811e3c1dcf19b32cb8bc2e4a05aefe72407d862d5842bf2adca5f8",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "994d1694fd19a30b2715a878f5bf75d2129aadba",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-missing-whitespace.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-missing-whitespace.vtt",
+      "bytes": 10,
+      "sha256": "72ba7f91303d12713655aeab8ac6e472d6eb95b7f689d24aea1cc7d329695724",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "7ed44af02c7f9940616a8fd7b8d5b0446452e0a1",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-missing.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-missing.vtt",
+      "bytes": 38,
+      "sha256": "9a21137cf03abbf8d71907ff1fb7404616d47cf37dafba8385da23d8f2d5e125",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "bd90460a23b99e46009eb2ce895fcbd4964227a1",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-no-newline.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-no-newline.test",
+      "bytes": 144,
+      "sha256": "fb5afe87060222255b2381fc57d9d4aef1d41caf167bb932497084ca81db7a07",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "13cf042c17b273046cd4c3bd64bb0c1710b927c7",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-null.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-null.vtt",
+      "bytes": 8,
+      "sha256": "f8e700b0d15e5b552762175a2403b8b051c0cbbbd45b107ae8f65be7bd3d9495",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ead93cc166f4bd370c9dccfa6c9e8b3e21279767",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-partial.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-partial.vtt",
+      "bytes": 6,
+      "sha256": "5007595a7b099d13981aca23d4ca97a43d99e19d8ac4cc0333005f2dc7edac1a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3e5de2b6c94b8b5c98acdebdc784e5aaf489bafc",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-space-no-newline.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-space-no-newline.test",
+      "bytes": 155,
+      "sha256": "14fc7c3bf2b7d3895d261a09c62aa0f5c2856cfc6d3639341086d2d62d23df31",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "021107316f1cc4dcaabf42644d8f9fa11d61f9dd",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-space.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-space.test",
+      "bytes": 144,
+      "sha256": "f575eb6eac04fe25d7d92d2814f14af861b24240b0a6338a5b07768cac7e43a2",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "349562eb9e34e1cfd17f62b1455b4bb0ddfbc6b3",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-tab-no-newline.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-tab-no-newline.test",
+      "bytes": 151,
+      "sha256": "7a484cda2feb53d07b21cc44f973cf6696ccb9304eea1d1d4e4b65e759ae9874",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "fbca4bed6064c83548f861ab34e3f72511af06c8",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-tab.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-tab.test",
+      "bytes": 140,
+      "sha256": "8e0fcfba72b601cae6e4da83eb79f3c7466e485435eb28e0e3df1a175f48b33a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3b500d04636ba24fe5c2c9d608f4d334ec2eb379",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-timings.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-timings.test",
+      "bytes": 177,
+      "sha256": "6ef812352587093454fee6ed04e3da98d85a2dce83697b2d8445318e8f2dd9fa",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "0197e8ac423920e17a0ed0624acba24149ffe6ee",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-two-boms.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-two-boms.vtt",
+      "bytes": 13,
+      "sha256": "22aee1ef667e90e7e07e70b9a7ea662fc049940d8d5747af3ddddd7dfc88a55f",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "05c973be1837f25cf9d013980a0ef257d0484bbe",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/signature-websrt.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/signature-websrt.vtt",
+      "bytes": 7,
+      "sha256": "e6d1613896f7da9591d500875598de3895d133025f77919eac5b7bc0fecb33ab",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4a02525e381f9b3c07e670c6781d47cbcaaabb8d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/stylesheets.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/stylesheets.test",
+      "bytes": 470,
+      "sha256": "ae5cfab73016ee74756f67a5bc601b59839b5332281a277ac5e792b95e60dfc9",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f4fbf424fc390f176139791fd05b2f822c58418e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-60.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-60.test",
+      "bytes": 605,
+      "sha256": "c21be413d40e3b4f7693104d197ea48deb78ef15c1ccb4f6dc3386ec585e9fec",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "7cfe4823922263d07608a52cd0bc70b190cf1a1f",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-eof.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-eof.test",
+      "bytes": 156,
+      "sha256": "16a11be99e2cf1d5c2bdbce7883bf7d2a114e51bee9a5e8f8ee5f2b75be95dbd",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "7b871164e9f8bb599c2502f00f34bbf31c490bc4",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-garbage.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-garbage.test",
+      "bytes": 2723,
+      "sha256": "842578e55fe41637c48cd08733b3f75fe6b5d7fbc13cc3cfb281746a7df25b1b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "99f7c28b42f485c334495cfa2149d82624b8efae",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-negative.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-negative.test",
+      "bytes": 697,
+      "sha256": "594c96866a424209dc5aaef93a602043588efdcf2a1aab7664381a7cfcdbd9b0",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "2cded0092993eaf8fc650b13195f68ac5de5f06e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-omitted-hours.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-omitted-hours.test",
+      "bytes": 502,
+      "sha256": "28afb3f628c8dd084d8575f19cebabe9006692050e79649c7fb40d2528ebf859",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "8fb5858571d264d1b6118f0df04e0061146c2bcb",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-too-long.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-too-long.test",
+      "bytes": 923,
+      "sha256": "91aad120886588b53fdfa24f33e994667e87eaf74e5c2f4ae9449bee97aee116",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "5f2cc889a6664267110a7c55904a85fe31909d9b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/timings-too-short.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/timings-too-short.test",
+      "bytes": 1407,
+      "sha256": "c0472591ffd78151402f8a10db00be84d0ed1e35d2d89f07d2517da72e37ad35",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "d078eacf7c32b850deb4bd4d8439a5c2cacb2901",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/support/whitespace-chars.test",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/support/whitespace-chars.test",
+      "bytes": 624,
+      "sha256": "3a09caa988778641bce33c8a5d47ab4c357683ca50d7c0a830be9bb58460dcad",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "7ee43facaa65b263be645fc575d9ca734bee2d56",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/arrows.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/arrows.html",
+      "bytes": 1359,
+      "sha256": "06dba4991e458dc08d085f432ffcb627686cfbd280a46bc5ab47dd5c639d45e2",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "7eefc797c72b18e95f224d63bf22105f47d5b03d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/categories.json",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/categories.json",
+      "bytes": 227,
+      "sha256": "1f988fab5f5676b6f289ca14d15474c14fa864e8cb1c1a10db96db37f10e975a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "eac23f67ddf41f31272538915fb1ec04547b038b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/comment-in-cue-text.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/comment-in-cue-text.html",
+      "bytes": 1472,
+      "sha256": "0c42eae542ea4140b889eb4c566021dd4e773c2e4a989ee13897675db8a39762",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "fd8a9927cbd2352854e0c956f65bf7f44a4fbbed",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/header-garbage.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/header-garbage.html",
+      "bytes": 1322,
+      "sha256": "494e8d1ea76241f40924dcfbfd0a0356e15359f27c0fbf0b9fcc6235f4e6ff40",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4ebace24092dae59971a3b475426dcd37845219a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/header-regions.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/header-regions.html",
+      "bytes": 1508,
+      "sha256": "9e1172cd79eef7d315244478c99c19ba4e7b258b98ad0217c43494dc1894fcf5",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f935cb6a2a7a48a11060e62f89fe70e2642d7f2f",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/header-space.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/header-space.html",
+      "bytes": 1314,
+      "sha256": "263a232a88102e7244d377f5bf8a51a07c8fa0ee3da58bae1b91487fdc23f549",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "c679d69f51df0deb73888f4c9596f868a7695d05",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/header-tab.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/header-tab.html",
+      "bytes": 1306,
+      "sha256": "a2fc4b0997b3201e94589831784570ed497908aa0d6d8db85d886fdc1cdbc921",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "540bad54b6797576377e5b1e19e35f79b26be57a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/header-timings.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/header-timings.html",
+      "bytes": 1322,
+      "sha256": "97f107291a40672130261be4fbf2e37aa3c7c726124addd73f45fd3e3f8f0eaf",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "adff8579a75b5d303df85f34933271f00dd67348",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/ids.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/ids.html",
+      "bytes": 1357,
+      "sha256": "2898062fa8f5f09661615292e4a36a5f4d6d52ea4a2cab6648057c5f0c22d34e",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "73763836bc9802ca3ce7666baff2a4efafe9f8fb",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/newlines.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/newlines.html",
+      "bytes": 1479,
+      "sha256": "b3b152a2948fef1e4fa55698e4f29672aa360fbb04285861c11f4d603f7c6985",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6afab360672ae4d1ac456c450e1ff859e80dfc7c",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/nulls.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/nulls.html",
+      "bytes": 1760,
+      "sha256": "72fd07c4c0e07d0ea3720640759786cae2971735691901887aa87ab9648415c7",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "d3a97eae8de1b26231c274cc8317eb522bc45c5d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-edge-case.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-edge-case.html",
+      "bytes": 1632,
+      "sha256": "5b751223318572d814508bbe6e57e8c3672711d6deb52c9b5943eab6bfd8c7cb",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "db1f27f67f11f5730a117ddffd71ae793602049e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-id.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-id.html",
+      "bytes": 1460,
+      "sha256": "033f544493e5b2b9eaa0d570f05a0ded9600f3e31bcef9fa7698f2f780334bf4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3a6e3feafa644715800bdcc61399a7e966b2ee6b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-lines.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-lines.html",
+      "bytes": 1663,
+      "sha256": "83965acd6adfb62c10ba21f5d557e33deb7ed81e9bf8c36a695ad9a58d038086",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "9570a48d1149c9b8526150ea4e59b48dafffbf25",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-old.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-old.html",
+      "bytes": 1283,
+      "sha256": "6ef3369f2246e6ab87ea4d1dbae89c73251002f34711ae3abebf694b0c333a95",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ea6875756e66478db9935427327bd2db5fa5375e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-regionanchor.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-regionanchor.html",
+      "bytes": 1960,
+      "sha256": "bc8759e1453447a5879bef634a1bb0be8e4a23de08e936a3d8d7ab9e4d6ca7b5",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "1cccfe9a04615df3d12a1eee629b4f3798004c2a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-scroll.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-scroll.html",
+      "bytes": 1493,
+      "sha256": "843e838b99d8d10de2e1437623b607becc9046a7f0b790e967ce2f8b09f1e52a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "698af98f7ae5d45b57b454c375c28aedc6ce5f09",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/regions-viewportanchor.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/regions-viewportanchor.html",
+      "bytes": 1976,
+      "sha256": "e85337736282fd4c5ad27c1bf3467b3e178127236602068fc16a5634d9fef695",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "b4c905fa4e8bf722f2293da4587069e593fe292f",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-align.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-align.html",
+      "bytes": 1502,
+      "sha256": "bfc35323fe2e008a6496190e6b26dfd17e95066a3cb16e578c30d0f332de9a25",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "06ea26fa78c15080256e848deec766b82a544ebe",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-line.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-line.html",
+      "bytes": 3256,
+      "sha256": "76abf0c5de88b3914c76034017de414c680f9d41881e099e5fa14b28bb6e6ae6",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "eea9992839c0c71bfed979e4e10daa312708554d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-multiple.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-multiple.html",
+      "bytes": 1769,
+      "sha256": "6b95c207aa291e6a1f0baad835cb15df5ddc96ef5fb7a474858a23eac1ebd518",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "982a36a12559861bab963abd367c4a275264f123",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-position.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-position.html",
+      "bytes": 1943,
+      "sha256": "b1cf7d3d043313f0e0b783bdd9365d3b98b67a91e33f223b38179c47e626b1e3",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e92ce5f3927ae64a6d5ed25429a81b0748883a58",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-region.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-region.html",
+      "bytes": 1790,
+      "sha256": "467e8ce3da6be9e2c3d79005d0f008d2291ab8f46cb3b506f7e7971d472792c2",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "150f2feec46704ff34865c038a9d77d15de3fc0b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-size.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-size.html",
+      "bytes": 1571,
+      "sha256": "003c1ca915b2320d8794d4fa901bf63b5b4408b18ba202e24013e94fcbca44ab",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "be0ee561cb3f5c076cf8bee2fab66101338dd192",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/settings-vertical.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/settings-vertical.html",
+      "bytes": 1576,
+      "sha256": "6435c9b052096693ee3cc4f1719abdff333cb6b0627a240aa622a23d3a77de93",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "70af76588f65952b23fcdcfd090318f58bcef972",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-bom.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-bom.html",
+      "bytes": 1209,
+      "sha256": "11e60c8edb97e51d27e172b3f3c004b33a4036cbe8fc9ac791222bdd0280f7fe",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6addc7bb69521bd95c2964407f053703949eb8b9",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-no-newline.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-no-newline.html",
+      "bytes": 1237,
+      "sha256": "c4f111c07a487e84ee3b864bc70756579452306ff475a5b0e584fe3aa504c569",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e96915d3a3ed121c624f4298da688d6110e12c7f",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-space-no-newline.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-space-no-newline.html",
+      "bytes": 1263,
+      "sha256": "e2a9d4adde2dbb767c372f3fdd63b54847db0eff802316c03bfcd7980ba433a5",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "28a55f8f15822978e8142b659f8b54d4a19a9c47",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-space.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-space.html",
+      "bytes": 1217,
+      "sha256": "d413912c94499ea3c87b210f1393e580e7c46cfa3c7343206517d9fb560362e7",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "cfc1540947b5c52a9bfef94b7cbaba4eb2d6e7a7",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-tab-no-newline.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-tab-no-newline.html",
+      "bytes": 1255,
+      "sha256": "4964aa849e4b6d3fac34ff6cedfaa005c7f5a9962640b70ec38530b6b9cb769a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f4fd270df601321b68658cd4c22ff88a6d59b295",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-tab.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-tab.html",
+      "bytes": 1209,
+      "sha256": "144db3bf28735a0290114ee2a29aff785995cdfa581f8c44ae46a310236305f6",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "cd5df4c319df72212eeb76e9966f70bacfc569fa",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/signature-timings.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/signature-timings.html",
+      "bytes": 1225,
+      "sha256": "7d77ff244ecdeceb10f3fa4b50471c201febb5092e0c0b64832a9870bc6b8c3a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6394c8988847b29eef474f7c49a9457b11159bb0",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/stylesheets.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/stylesheets.html",
+      "bytes": 1279,
+      "sha256": "b1c2b421ffe2306b29c78ee3cf9ec22c46ed9278142d9f9cd87dd10cfe9e63d3",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "48cd920c79e9be08adff00878ec79656159458ae",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/arrows.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/arrows.vtt",
+      "bytes": 338,
+      "sha256": "8cf28c41682efcd1470248e959c517083e4a24d2b074d89d99dbdc4a0cc209b7",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "30d17b9de1afdbdf1a3616d133ead56d54440ae0",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/comment-in-cue-text.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/comment-in-cue-text.vtt",
+      "bytes": 258,
+      "sha256": "8ba23469de21e451275329f5d4568e10b0373230acd9776806849e7e41eb7221",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "47081905a7a4f97aff851c4cb5624013617fd598",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/header-garbage.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/header-garbage.vtt",
+      "bytes": 49,
+      "sha256": "a1c6601e257950fc8af281f8630b940862b9257dd03f6a4f03db436b9e9adf8f",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "0504e796bedfdfc2d37c023f5bf64d9c77386ea7",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/header-regions.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/header-regions.vtt",
+      "bytes": 1552,
+      "sha256": "e4e33b9b385dd009019fd068bf110144d83990a3da50a3092afe0647c99f6184",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "67308835b6c33947b0daed991ea4d7588619a34c",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/header-space.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/header-space.vtt",
+      "bytes": 43,
+      "sha256": "2b1d26e70e3247c4df6e6c37580009933baf1a0462f7e3b812ba8a1989c0cee4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "9462a1e7c10deede4cf67d5b6b4376493d2f7b8a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/header-tab.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/header-tab.vtt",
+      "bytes": 44,
+      "sha256": "866e8899a813b8ffbb75e21e09fdfcea3131516561339369034eb26c454f390f",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "76564a6e1a92065c9531368487c323339e21348e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/header-timings.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/header-timings.vtt",
+      "bytes": 41,
+      "sha256": "120478aac00b3f183655aabdd19a4b5f5630c9f68bfd7f1a66d8f6cfc9d6412e",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "5442228eecc16860af21dd928a7b8a6d127ccc26",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/ids.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/ids.vtt",
+      "bytes": 233,
+      "sha256": "af9040ec8589177021cfdba56f55d920ecb6ada1dbe2dd7ef2baa9a34b3c34a3",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "5f3e91f8a4b9082f26c0f9b7a6ef84b5c0ec404c",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/newlines.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/newlines.vtt",
+      "bytes": 177,
+      "sha256": "c99059ca0224d191bd1bc02cd30979b633ae6c32959c49b71b61d400297122fa",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "bde1c30e2c70b92f1afb86514f5eb965a885f5ea",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/nulls.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/nulls.vtt",
+      "bytes": 2792,
+      "sha256": "46bbd7651377a944ecab04940046210589af07016e4daf2ff5582ffb5849bb1d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "fe6d193d6372048b09f0d20ad188942b19f032f3",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-edge-case.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-edge-case.vtt",
+      "bytes": 400,
+      "sha256": "c98069bb5f731cbe576fa9f4b37086a3e994aa7620390446b584de8dc308daa4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "29debd5bd8f6b9362634ffed1fa4a60bdd869023",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-id.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-id.vtt",
+      "bytes": 398,
+      "sha256": "6951dee99cf76b86ae2d8eb5b3f234f3d9921ecec3cd4ecbe2d82e7aa79e43a9",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "bbcc14d2cd08e16ccf1049c1c0f2b36f78ff841e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-lines.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-lines.vtt",
+      "bytes": 810,
+      "sha256": "8a0d8f257a8aa5d251f1a2b8b35f0f05b370474ababbc3ad65e32c306b9cb9a3",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f8f867b79d8c88dd03d07ead006430b9d40ebf4b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-old.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-old.vtt",
+      "bytes": 279,
+      "sha256": "e70ce2e1bffa41e98d1b8c04ceb866df1a0c16d406937cc5f9161c45c3a07abc",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f9b26659a8385c0b36d9e815cff7edcdd978c900",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-regionanchor.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-regionanchor.vtt",
+      "bytes": 1836,
+      "sha256": "e77325fe6dd9a6beb27a72aec6ec59da0ff1a8309c2baefeb6242f5060e4ea61",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e6aa770c37b395779ee6987ee95b4f48dd3ab992",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-scroll.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-scroll.vtt",
+      "bytes": 602,
+      "sha256": "eaf506105fb1a191b53b461278d3dd57dc11b84fea99e42175ab02a8ada20cbc",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4c7f21d935f41191be664c291f60922942e5fcf4",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/regions-viewportanchor.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/regions-viewportanchor.vtt",
+      "bytes": 1884,
+      "sha256": "720e976f08c9771895d463a7808552fb151f8a6e9d5e8ec6123e2c0bdb0a2259",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "7470be647cd46d1185eb1b6d8d9f277f8693be7e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-align.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-align.vtt",
+      "bytes": 10687,
+      "sha256": "9245302815d13c8657be1c9db5f5796fa3f81b0a2f1f58f8c5943cc31ca7550e",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3bcfe5ac4cbcee3c940aad0aa1d9b215c9dea68d",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-line.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-line.vtt",
+      "bytes": 5271,
+      "sha256": "60af0047469504a549b32a30a6e643b6bb5c1ff493ea0d05a308687b329b37ae",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "9ff908039c6cd259743ff3eeb0019fb859171c0f",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-multiple.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-multiple.vtt",
+      "bytes": 197,
+      "sha256": "47885479965797c095d0cec5ed97a52403c54a22324629dd3b1f082c4a3b1faa",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "17035a2a4207957f3108a81cf1affc113c23e4a5",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-position.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-position.vtt",
+      "bytes": 1698,
+      "sha256": "f4ac68c4190051270c6591ab62276dfc5c2609fee99add4da0df6063fc0ddd16",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "22c3bf189f1d37c3239866eef9834708f33ad30e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-region.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-region.vtt",
+      "bytes": 541,
+      "sha256": "ca7a04d3da974b3aba3e389e0f77bbf111b39c0f3ba6fbe9cd0e64741805342b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "9116d3736701cd416302f69b909d5a309a73009b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-size.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-size.vtt",
+      "bytes": 815,
+      "sha256": "46ec268c84abd3964c0902dc0917178ae68106182a04f76a89b3158fb4fc426b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "9c2cb8a78c9825c34f3b9dc9e5f0c0c2b7b17c11",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/settings-vertical.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/settings-vertical.vtt",
+      "bytes": 419,
+      "sha256": "17d3c3bbf6b409234733ee6f71d633cf92a51b4c9a531ed9806cd5925d18b6d4",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f24c86eaa9445d605da537f6f7032bc40279ad33",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-bom.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-bom.vtt",
+      "bytes": 10,
+      "sha256": "6bb8731176340e7e53f2378aed8792da668464403515b1e19ce149d36c2c7121",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "c0a1057770bfd304c1d34ba729db6e7e8723f9f0",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-no-newline.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-no-newline.vtt",
+      "bytes": 6,
+      "sha256": "06527510e01d4a6dbdd1fbd67cc7fc9bdb0227757930b65216653df4b17f915f",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "af1827ddf91d25a380a2c0d8bf8a4cc12f09fd31",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-space-no-newline.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-space-no-newline.vtt",
+      "bytes": 7,
+      "sha256": "afd82de6989957f7ee78da05f01c9fa23c78c698f06584ea4b23caf994e798f1",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6abbf425aee6707771a54cb46e19bd93c3a266d5",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-space.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-space.vtt",
+      "bytes": 8,
+      "sha256": "2a0821ad005357ad516b3fbde4b0bbcef5f85dce4b48077e15ae2c31a0d755f1",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "1352a2093194b4faac2c0aeb5ada74700c57043a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-tab-no-newline.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-tab-no-newline.vtt",
+      "bytes": 7,
+      "sha256": "0828bf915b78d64054b5fac78fd26a88e5ecec120dcce9bcd4d51cc51fd811ef",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "e28ec9b83b1d37ff3c12ec0543faba6db030ac13",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-tab.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-tab.vtt",
+      "bytes": 8,
+      "sha256": "003d65824f7feb828d002f5aa6f1caeedd6270f21b11e612bfd5f8efc0c7ca3b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ab4bb0ea6f5861cdbf1c1a3e6ff639ce428a7040",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/signature-timings.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/signature-timings.vtt",
+      "bytes": 42,
+      "sha256": "a85c4fece1a7811384dab781610429b8a5e89dc687a29da49a47242f682dff07",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "067c284f9345a6be0d41ecfb1e59d2db10f83db3",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/stylesheets.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/stylesheets.vtt",
+      "bytes": 269,
+      "sha256": "ff52da95521e9d348f9b13cb343fe328fe6c882af270f0a62c4b4384604c9b98",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "409718af0788d0ea969f3beb1b29aa5978a424a2",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-60.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-60.vtt",
+      "bytes": 237,
+      "sha256": "0fb1a3b757fc1198efd2d62abb22425b049ab9999b748539251138bb6596e436",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "68475fbbaabd046167ce60624f31f9f217e200c1",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-eof.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-eof.vtt",
+      "bytes": 24,
+      "sha256": "5655affaa9a911daf57f1094ec252b63c2b3ce583f295d0a51071293b11baca1",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "470221d29c2072adb1f235beba31411527cd960e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-garbage.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-garbage.vtt",
+      "bytes": 2492,
+      "sha256": "3b19d67a07f149215930b07a2bdeb4e8158d72c34473e6eb6098fd33b7ea752a",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "16291237a2d6351be55892defe719c9c5e7b3962",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-negative.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-negative.vtt",
+      "bytes": 155,
+      "sha256": "5df72f225e672ac7eba9105f70a348badeb30e0896c5df6a4f0d74ef1fbd51f5",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "fb3589d8a13d45e689aab311f672d3abe7983598",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-omitted-hours.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-omitted-hours.vtt",
+      "bytes": 106,
+      "sha256": "5ded133d08ae7deb7dee8a502e24121c22596bf851a247d06f0ff5029d46b296",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "f581ae302539a846dff9012d848a2113c2a50161",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-too-long.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-too-long.vtt",
+      "bytes": 564,
+      "sha256": "ec14d07563b60f55b4e6eed6d3875361afcf9289d22039d306bc86ad0169172d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "6357f8dccc6c771d05ed819190d0e2792597256e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/timings-too-short.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/timings-too-short.vtt",
+      "bytes": 1047,
+      "sha256": "112d1d8df5ad03ae3ed963e257264077d0db6bc1ef68aebb7067ae85c91ef3ee",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "78d190a7bca64f2ec53cfa762f6eb5ad4b5e48fe",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/support/whitespace-chars.vtt",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/support/whitespace-chars.vtt",
+      "bytes": 227,
+      "sha256": "288513e45488ac3081148655468a127d6b3b0c96d29d0a6ad210f8a89d1b952d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "b26c93cd19849f3967847fc05bb9ad2a2ffa9a19",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-60.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-60.html",
+      "bytes": 1437,
+      "sha256": "2b02c482963e589141b2d8f537232d558ab699d7796d3f2c78c15c0c416de52b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ddc21a0915205d02da5820324b13d4e955ef0615",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-eof.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-eof.html",
+      "bytes": 1204,
+      "sha256": "cb9a1ccb2d553b398c2abb573f5a58339e9a31849caa07687590f2a1ca00ee9d",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3750cfb7033c688bcc0ae522961d42b224c52406",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-garbage.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-garbage.html",
+      "bytes": 1315,
+      "sha256": "a6c08b5bd4386fbe4bdef99ab501069f3b23557679411b345c1bf9c101e4cf23",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "4af3ca47f1c1d2f456af2305ea9237ae96dbb89b",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-negative.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-negative.html",
+      "bytes": 1629,
+      "sha256": "969d9f17ae866da5e2d81102a5544362c81d995722f518df53ae29f99fae48ef",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "5645de6e274479115f80c89610f47453ef2a18cb",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-omitted-hours.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-omitted-hours.html",
+      "bytes": 1498,
+      "sha256": "d210c3b186abc121fc2358408065a5c89f6acc72658aa1d661307170103ad81f",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "89c6f6789665b34a53213aee71dae7ccf37f079a",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-too-long.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-too-long.html",
+      "bytes": 1446,
+      "sha256": "86c7b3078b15d4f303c1327eba2b58a3e94c3966c45f910910fe927f3b09156b",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "5270c62173b8de5ad62c6117551523746eca326e",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/timings-too-short.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/timings-too-short.html",
+      "bytes": 1450,
+      "sha256": "2474f0641fd341e80801e1909275e886eb5780c1dece242dff1ed050ba854af3",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "3295260d44d7f4343ed47c3a5a19b015acc59e2f",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/WEB_FEATURES.yml",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/WEB_FEATURES.yml",
+      "bytes": 1406,
+      "sha256": "38ef6a845f9200761e3fd8506cfd17c6a71690c53f26c3e16c4c9b075692e61e",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "ee55d23f21944f4108bd4314ae444382836207c6",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/tests/whitespace-chars.html",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/tests/whitespace-chars.html",
+      "bytes": 1450,
+      "sha256": "96bedce7b80f6270b6387e91a9d10b3ee42b6d7b69b50ce492c4c44a15e5f45c",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "92ecf7e0c220391cb276252ee1e5d9ef7cf21b86",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    },
+    {
+      "path": "wpt/webvtt/parsing/file-parsing/WEB_FEATURES.yml",
+      "url": "https://raw.githubusercontent.com/web-platform-tests/wpt/ab209eeecc95915675cde8d26ede4b2d803b4055/webvtt/parsing/file-parsing/WEB_FEATURES.yml",
+      "bytes": 42,
+      "sha256": "9ca47b0800da9e72889038dca056b3c65d0473f879476414a02a65afb07b9ba5",
+      "kind": "upstream-conformance",
+      "revision": "ab209eeecc95915675cde8d26ede4b2d803b4055",
+      "gitBlob": "c38ea2ecee21d4acd7b8e9499c97158e5fbb43b1",
+      "license": "BSD-3-Clause; see wpt/LICENSE.md"
+    }
+  ]
+}

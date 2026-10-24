@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subtitle parser — local file example</title>
+<style>
+:root{font:16px/1.55 system-ui;color:#172b3a;background:#f3f6f8}body{max-width:960px;margin:32px auto;padding:0 20px}h1{line-height:1.2}fieldset,section{background:white;border:1px solid #c9d5df;border-radius:10px;padding:20px;margin:20px 0}label{display:block;margin:12px 0}select,input,button{font:inherit}select,button,input[type=file]{padding:8px;max-width:100%}button{cursor:pointer;margin:5px 5px 5px 0}button:disabled{cursor:default}pre{white-space:pre-wrap;overflow-wrap:anywhere}article{border-top:1px solid #d7e1e8;padding:12px 0}small{color:#465c6b}#status{padding:12px;border-left:4px solid #26708b;background:#e9f4f8}.controls{display:flex;gap:20px;flex-wrap:wrap}.controls label{flex:1;min-width:180px}summary{cursor:pointer}a{color:#155e8a}*:focus-visible{outline:3px solid #176dad;outline-offset:3px}
+</style>
+<main>
+<h1>Read a subtitle file</h1>
+<p>SRT · WebVTT · SAMI · ASS/SSA. Processing stays in this browser. No uploads or storage.</p>
+<p><a href="../README.md">Quick start</a> · <a href="../docs/DIAGNOSTICS.md">Diagnostic guide</a></p>
+<fieldset><legend>Input</legend>
+<label for="file">Subtitle file (up to 16 MiB)</label><input id="file" type="file" accept=".srt,.vtt,.smi,.sami,.ass,.ssa,text/*">
+<div class="controls">
+<label for="encoding">Encoding<select id="encoding"><option value="">UTF-8 / BOM (no guessing)</option><option value="euc-kr">EUC-KR</option><option value="windows-1252">Windows-1252</option><option value="utf-8">UTF-8 (explicit)</option><option value="utf-16le">UTF-16LE</option><option value="utf-16be">UTF-16BE</option></select></label>
+<label for="format">Format<select id="format"><option value="">Detect from content</option><option>srt</option><option>vtt</option><option>sami</option><option>ass</option><option>ssa</option></select></label>
+</div>
+<label><input type="checkbox" id="replacement"> Allow replacement of invalid bytes (may lose characters)</label>
+<button id="parse" type="button" disabled>Parse file</button><button id="cancel" type="button" disabled>Cancel</button><button id="sample" type="button">Try bilingual SAMI sample</button>
+<p><small>File extensions are hints for the picker only. Choose a format explicitly if detection is ambiguous. A 10-second example deadline terminates the worker.</small></p>
+</fieldset>
+<p id="status" role="status" aria-live="polite">Choose a file or try the sample.</p>
+<section id="output" hidden>
+<h2>Result</h2><p id="summary"></p>
+<label for="track">Track<select id="track"></select></label>
+<p id="track-page" role="status"></p><button id="track-prev" type="button" disabled>Previous 100 tracks</button><button id="track-next" type="button" disabled>Next 100 tracks</button>
+<p id="count"></p><div id="cues"></div>
+<h2>Diagnostics</h2><p>Warnings may describe recovery, omitted data or unsupported presentation. They are not a count of missing cues.</p><p id="diagnostic-count"></p><pre id="diagnostics"></pre>
+<details><summary>Decoded source preview</summary><p id="source-note"></p><pre id="source"></pre></details>
+<button id="download" type="button">Download full result JSON</button>
+<p><small>Only previews are shortened. JSON retains all tracks, source, raw text, diagnostics and parser truncation flags. Source means decoded text, not original bytes. Keep the original file for byte-perfect archival. Unknown ends remain null. This example does not render subtitle styling or guess playback durations.</small></p>
+</section>
+</main>
+<script type="module" src="./browser.mjs"></script>
+</html>

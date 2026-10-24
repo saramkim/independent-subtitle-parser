@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><title>Subtitle parser corpus verification</title>
+<h1>Subtitle parser corpus verification</h1><pre id="result">Running…</pre>
+<script type="module">
+import {parse,decode} from '../../dist/index.js';
+const inputs=await(await fetch('/cases.json')).json();
+async function nativeParse(source){
+  const video=document.createElement('video'),track=document.createElement('track'),url=URL.createObjectURL(new Blob([source],{type:'text/vtt'}));
+  try{return await new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>reject(Error('Native track timeout')),5000);
+    track.onload=()=>{clearTimeout(timer);resolve(Array.from(track.track.cues??[]).map(c=>({id:c.id,startTime:c.startTime,endTime:c.endTime,text:c.text,projection:c.getCueAsHTML().textContent})));};
+    track.onerror=()=>{clearTimeout(timer);reject(Error('Native track error'));};
+    track.src=url;video.append(track);document.body.append(video);track.track.mode='hidden';
+  });}finally{video.remove();URL.revokeObjectURL(url);}
+}
+const results={userAgent:navigator.userAgent,at:new Date().toISOString(),wpt:[],projections:[],real:[],formats:[]};
+try{
+  for(const f of inputs.wpt){const r=parse(f.source,{format:'vtt'}),native=await nativeParse(f.source);
+    const own=r.cues.map(c=>({id:c.id??'',startTime:c.start/1000,endTime:c.end/1000,text:c.rawText}));
+    const check=cues=>f.assertions.filter(a=>!Object.is(a.index===null?cues.length:cues[a.index]?.[a.property],a.expected));
+    results.wpt.push({id:f.id,checked:f.assertions.length,ownFailures:check(own),nativeFailures:check(native),declaredPolicy:f.id==='timings-negative.test'});
+  }
+  for(const f of inputs.projections){const r=parse(f.source,{format:'vtt'}),native=await nativeParse(f.source);results.projections.push({id:f.id,expected:f.expected,actual:r.cues[0]?.text??'',native:native[0]?.projection??'',declaredPolicy:f.policy});}
+  for(const f of inputs.real){const r=parse(f.source,{format:'srt'});results.real.push({id:f.id,checked:f.expected!==null,pass:f.expected===null?null:JSON.stringify(r.cues.map(c=>[c.start,c.end,c.rawText]))===JSON.stringify(f.expected),status:r.status,cues:r.cues.length});}
+  for(const f of inputs.formats){const r=parse(f.source,{format:f.format});results.formats.push({id:f.id,pass:JSON.stringify(r.cues.map(c=>[c.start,c.end,c.text]))===JSON.stringify(f.expected)});}
+  results.decode={eucKr:decode(new Uint8Array([0xb0,0xa1]),{encoding:'euc-kr'}).text==='가',utf16:decode(new Uint8Array([255,254,65,0])).text==='A',windows1252:decode(new Uint8Array([128,145,159]),{encoding:'windows-1252'}).text==='€‘Ÿ'};
+  results.status=results.wpt.every(r=>r.ownFailures.length===0||r.declaredPolicy)&&results.projections.every(r=>r.actual===r.expected||r.declaredPolicy)&&results.real.every(r=>r.pass!==false)&&results.formats.every(r=>r.pass)&&Object.values(results.decode).every(Boolean)?'PASS':'FAIL';
+}catch(e){results.status='FAIL';results.error=String(e);}
+await fetch('/save',{method:'POST',body:JSON.stringify(results)});
+document.querySelector('#result').textContent=JSON.stringify({status:results.status,userAgent:results.userAgent,wptCases:results.wpt.length,wptUnexpected:results.wpt.filter(r=>r.ownFailures.length&&!r.declaredPolicy),nativeWptDifferences:results.wpt.filter(r=>r.nativeFailures.length),projections:results.projections.length,nativeProjectionDifferences:results.projections.filter(r=>r.native!==r.expected),realFiles:results.real.length,formats:results.formats.length,decode:results.decode,error:results.error},null,2);
+</script>

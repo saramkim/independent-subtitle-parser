@@ -1,0 +1,13 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const version='v20.20.2',name=`node-${version}-win-x64.zip`,base=`https://nodejs.org/dist/${version}/`;
+mkdirSync(new URL('../../.runtime-cache/',import.meta.url),{recursive:true});
+const sums=await(await fetch(base+'SHASUMS256.txt')).text();
+const expected=sums.split('\n').find(l=>l.endsWith('  '+name))?.split(' ')[0];
+if(!expected)throw Error('Missing official checksum');
+const data=Buffer.from(await(await fetch(base+name)).arrayBuffer());
+const actual=createHash('sha256').update(data).digest('hex');
+if(actual!==expected)throw Error('Checksum mismatch');
+writeFileSync(new URL('../../.runtime-cache/'+name,import.meta.url),data,{flag:'wx'});
+writeFileSync(new URL('../../evidence/quality-013-work/node20-provenance.json',import.meta.url),JSON.stringify({version,url:base+name,checksumUrl:base+'SHASUMS256.txt',sha256:actual,bytes:data.length,downloadedAt:new Date().toISOString()},null,2)+'\n',{flag:'wx'});
+console.log(`${version} verified ${actual}`);

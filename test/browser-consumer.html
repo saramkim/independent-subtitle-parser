@@ -1,0 +1,106 @@
+<!doctype html><meta charset="utf-8"><title>Installed consumer verification</title>
+<h1>Installed consumer verification</h1><pre id="report">Running…</pre>
+<iframe id="demo" src="/examples/browser.html" title="Installed browser example" style="width:100%;height:650px"></iframe>
+<script type="module">
+import { startParse } from '/examples/worker-client.mjs';
+const frame = document.querySelector('#demo');
+const checks = [];
+const assert = (value, message) => { if (!value) throw Error(message); };
+const wait = async (condition, label) => {
+  const until = performance.now() + 15000;
+  while (!condition()) { if (performance.now() > until) throw Error('Timed out: ' + label); await new Promise(r => setTimeout(r, 20)); }
+};
+try {
+  await new Promise(resolve => { if (frame.contentDocument.readyState === 'complete' && frame.contentDocument.querySelector('#sample')) resolve(); else frame.addEventListener('load', resolve, { once:true }); });
+  const doc = frame.contentDocument, win = frame.contentWindow;
+  const $ = id => doc.getElementById(id);
+  const change = (id, value) => { $(id).value = value; $(id).dispatchEvent(new win.Event('change')); };
+  const choose = (parts, name = 'fixture.srt') => {
+    const transfer = new win.DataTransfer(); transfer.items.add(new win.File(parts, name));
+    $('file').files = transfer.files; $('file').dispatchEvent(new win.Event('change'));
+  };
+  const run = async () => { $('parse').click(); await wait(() => $('cancel').disabled, 'parse completion'); };
+  const cueText = () => $('cues').textContent;
+  $('sample').click(); await wait(() => !$('output').hidden, 'sample');
+  assert($('track').options.length === 2 && cueText().includes('안녕하세요') && cueText().includes('unknown'), 'sample tracks/unknown end');
+  change('track', $('track').options[1].value);
+  assert(cueText().includes('Hello') && !cueText().includes('안녕하세요'), 'track filtering');
+  checks.push('native module Worker; bilingual tracks and unknown ends');
+
+  const prefix = new TextEncoder().encode('1\n00:00:00,000 --> 00:00:01,000\n');
+  choose([prefix, Uint8Array.of(0xff)]); await run();
+  assert($('summary').textContent.includes('not run (decode failed)') && !cueText(), 'decode failure clears old cues');
+  $('replacement').checked = true; $('replacement').dispatchEvent(new win.Event('change')); await run();
+  assert($('summary').textContent.includes('parse: ok') && $('diagnostics').textContent.includes('decode/warning') && cueText().includes('\ufffd'), 'replacement warning retained');
+  checks.push('invalid UTF-8, decode failure, replacement warning with parse ok');
+  $('replacement').checked = false; $('replacement').dispatchEvent(new win.Event('change'));
+  change('encoding', 'euc-kr'); choose([prefix, Uint8Array.of(0xb0,0xa1)]); await run();
+  assert(cueText().includes('가'), 'legacy encoding applies to bytes'); checks.push('explicit EUC-KR bytes');
+  change('encoding', 'utf-8'); choose([Uint8Array.of(0xff,0xfe,65,0)]); await run();
+  assert($('diagnostics').textContent.includes('ENCODING_BOM_CONFLICT'), 'BOM conflict'); checks.push('BOM conflict');
+
+  change('encoding', ''); choose(['00:00:00.000 --> 00:00:01.000\nRecovered']); await run();
+  assert($('diagnostics').textContent.includes('AMBIGUOUS_FORMAT'), 'ambiguous auto');
+  change('format','srt'); await run(); assert(cueText().includes('Recovered'), 'explicit format recovery');
+  checks.push('ambiguous detection and explicit format recovery');
+  change('format',''); choose(['WEBVTT\n\n']); await run();
+  assert($('status').textContent.includes('no cues'), 'empty successful parse'); checks.push('empty cue set is visible');
+
+  let large = 'WEBVTT\n\n';
+  for (let i=0;i<1100;i++) large += `00:00.000 --> 00:01.000\n<x>${i===0?'A'.repeat(12000):'short'}</x>\n\n`;
+  choose([large], '<img src=x onerror=alert(1)>.vtt'); await run();
+  assert($('cues').children.length===100 && $('count').textContent.includes('1100'), 'cue preview cap');
+  assert($('diagnostic-count').textContent.includes('truncated: true') && $('diagnostic-count').textContent.includes('showing 100'), 'separate diagnostic caps');
+  assert($('source').textContent.length<10100 && $('cues').querySelector('pre').textContent.length<5100, 'text preview caps');
+  assert(!doc.querySelector('img'), 'input is inert text');
+  checks.push('1100 cues: cue/text/source/diagnostic caps and inert file name');
+
+  let tracks = '<SAMI><SYNC Start=0>';
+  for (let i=0;i<205;i++) tracks += `<P Class="${i===0?'L'.repeat(5000):'T'+i}">Track ${i}`;
+  choose([tracks + '</SAMI>']); await run();
+  assert($('track').options.length===100 && $('track').options[0].textContent.length<300, 'bounded track options and labels');
+  $('track-next').click(); assert(cueText().includes('Track 100'), 'second track page');
+  $('track-next').click(); assert($('track').options.length===5 && $('track-next').disabled && cueText().includes('Track 200'), 'last track page accessible');
+  change('track', $('track').options[4].value); assert(cueText().includes('Track 204'), 'last track selectable');
+  $('track-prev').click(); assert(cueText().includes('Track 100'), 'previous page accessible');
+  checks.push('205 tracks: bounded options, long labels and complete paged access');
+
+  $('parse').click(); $('cancel').click();
+  await new Promise(r=>setTimeout(r,150));
+  assert($('output').hidden && $('status').textContent.startsWith('Cancelled'), 'cancel remains current');
+  $('parse').click(); choose(['1\n00:00:00,000 --> 00:00:01,000\nNew file']); await run();
+  await new Promise(r=>setTimeout(r,150));
+  assert(cueText().includes('New file') && !cueText().includes('short'), 'new job wins');
+  checks.push('cancel and immediate file replacement suppress stale results');
+
+  choose([new Uint8Array(16*1024*1024+1)]); await run();
+  assert($('output').hidden && $('status').textContent.includes('No file contents were read'), 'oversize rejected before reading');
+  checks.push('oversize file refused before worker/read');
+
+  const native = new Worker('/__busy.mjs', {type:'module'});
+  let busyStarted = false, terminations = 0;
+  const wrapper = {
+    terminate() { terminations++; native.terminate(); },
+    postMessage(value) { native.postMessage(value); },
+    set onmessage(fn) { native.onmessage=e=>{ if(e.data.ready) busyStarted=true; else fn(e); }; },
+    set onerror(fn) { native.onerror=fn; }, set onmessageerror(fn) { native.onmessageerror=fn; }
+  };
+  const timed = startParse(null,{}, {timeoutMs:1000,createWorker:()=>wrapper});
+  let timedOut = false; try { await timed.promise; } catch(e) { timedOut = /deadline/.test(e.message); }
+  assert(busyStarted && timedOut && terminations===1, 'busy worker actually terminated by deadline');
+  checks.push('native busy-loop worker termination at host deadline');
+  const broken = startParse(null,{}, {createWorker:()=>new Worker('/__missing.mjs',{type:'module'})});
+  let loadFailed=false; try { await broken.promise; } catch(e) { loadFailed=/load or execute/.test(e.message); }
+  assert(loadFailed,'worker load failure');
+  $('sample').click(); await wait(()=>!$('output').hidden,'recovery');
+  assert(cueText().includes('안녕하세요'),'usable after errors'); checks.push('native module-load failure then successful UI operation');
+
+  const report={status:'PASS',userAgent:navigator.userAgent,checks};
+  document.querySelector('#report').textContent=JSON.stringify(report,null,2);
+  await fetch('/__result',{method:'POST',body:JSON.stringify(report)});
+} catch(error) {
+  const report={status:'FAIL',error:String(error),checks};
+  document.querySelector('#report').textContent=JSON.stringify(report,null,2);
+  await fetch('/__result',{method:'POST',body:JSON.stringify(report)});
+}
+</script>

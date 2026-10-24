@@ -1,0 +1,41 @@
+{
+  "name": "independent-subtitle-parser",
+  "version": "0.1.5",
+  "private": true,
+  "description": "Independent, dependency-free subtitle parsing for browsers and Node.js",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["subtitle", "srt", "webvtt", "sami", "ass", "ssa", "parser", "typescript"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "LICENSE",
+    "docs",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node scripts/test.mjs",
+    "bench": "npm run build && node scripts/benchmark.mjs",
+    "check:package": "npm run build && node scripts/package-smoke.mjs",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

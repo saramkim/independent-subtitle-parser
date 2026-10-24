@@ -1,0 +1,18 @@
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const version = '158.0.1';
+const base = `https://archive.mozilla.org/pub/firefox/releases/${version}/`;
+const entry = `win64/en-US/Firefox Setup ${version}.exe`;
+const response = await fetch(base + encodeURI(entry));
+if (!response.ok) throw Error(`Firefox download: ${response.status}`);
+const bytes = Buffer.from(await response.arrayBuffer());
+const sums = await (await fetch(base + 'SHA512SUMS')).text();
+const expected = sums.split('\n').find(l => l.endsWith('  ' + entry))?.split(/\s+/)[0];
+const sha512 = createHash('sha512').update(bytes).digest('hex');
+if (!expected || expected !== sha512) throw Error('Official SHA512SUMS mismatch');
+const path = `.runtime-cache/firefox-${version}`;
+mkdirSync(path);
+writeFileSync(`${path}/setup.exe`, bytes, { flag: 'wx' });
+writeFileSync(`${path}/SHA512SUMS`, sums, { flag: 'wx' });
+writeFileSync('evidence/release-015-work/firefox-acquisition.json', JSON.stringify({ version, url: base + encodeURI(entry), bytes: bytes.length, sha512, officialSha512Matches: true }, null, 2) + '\n', { flag: 'wx' });
+console.log(`${path}/setup.exe: ${bytes.length} bytes; official SHA-512 PASS`);

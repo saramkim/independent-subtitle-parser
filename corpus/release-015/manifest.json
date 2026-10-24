@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "path": "corpus/release-015/libass/COPYING",
+      "url": "https://raw.githubusercontent.com/libass/libass/f61db567e6593df3470e91594bcd4ad2d0473aff/COPYING",
+      "repository": "libass/libass",
+      "revision": "f61db567e6593df3470e91594bcd4ad2d0473aff",
+      "license": "ISC",
+      "bytes": 755,
+      "sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c"
+    },
+    {
+      "path": "corpus/release-015/libass/sub1.ass",
+      "url": "https://raw.githubusercontent.com/libass/libass/f61db567e6593df3470e91594bcd4ad2d0473aff/compare/test/sub1.ass",
+      "repository": "libass/libass",
+      "revision": "f61db567e6593df3470e91594bcd4ad2d0473aff",
+      "license": "ISC",
+      "bytes": 590,
+      "sha256": "97251429c2cb3384ed38439e85dce94859fbb2148f866224fbb2be1a8c4dc557"
+    },
+    {
+      "path": "corpus/release-015/libass/sub2.ass",
+      "url": "https://raw.githubusercontent.com/libass/libass/f61db567e6593df3470e91594bcd4ad2d0473aff/compare/test/sub2.ass",
+      "repository": "libass/libass",
+      "revision": "f61db567e6593df3470e91594bcd4ad2d0473aff",
+      "license": "ISC",
+      "bytes": 600,
+      "sha256": "87892447d044f9e84c768a4eefde6b3216466894711b42a3130925a78d07c26a"
+    },
+    {
+      "path": "corpus/release-015/microsoft/LICENSE",
+      "url": "https://raw.githubusercontent.com/microsoft/Windows-classic-samples/434f6002bdf9cf9829406c3ff2b33387982d6168/LICENSE",
+      "repository": "microsoft/Windows-classic-samples",
+      "revision": "434f6002bdf9cf9829406c3ff2b33387982d6168",
+      "license": "MIT",
+      "bytes": 1231,
+      "sha256": "3645a237b872306e4955bc2ce75783537bd7123bcb57332f8819e4cfbcf50b45"
+    },
+    {
+      "path": "corpus/release-015/microsoft/ccsample.smi",
+      "url": "https://raw.githubusercontent.com/microsoft/Windows-classic-samples/434f6002bdf9cf9829406c3ff2b33387982d6168/Samples/Win7Samples/multimedia/WMP/media/ccsample.smi",
+      "repository": "microsoft/Windows-classic-samples",
+      "revision": "434f6002bdf9cf9829406c3ff2b33387982d6168",
+      "license": "MIT",
+      "bytes": 1315,
+      "sha256": "00996b5181531b1e711c6bebe597475ceeb5cdcb0a11ca897809222cebc54fa7"
+    }
+  ]
+}
