@@ -1,5 +1,7 @@
 # Independent Subtitle Parser
 
+[![CI](https://github.com/saramkim/independent-subtitle-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/saramkim/independent-subtitle-parser/actions/workflows/ci.yml)
+
 Parse **SRT, WebVTT, SAMI/SMI and ASS/SSA** with one TypeScript API in browsers
 and Node.js. Extract timed text and language tracks while keeping the source,
 raw markup and diagnostics available for inspection.
@@ -24,6 +26,8 @@ npm install ./independent-subtitle-parser-0.1.7.tgz
 To build that tarball from a source checkout:
 
 ```sh
+git clone https://github.com/saramkim/independent-subtitle-parser.git
+cd independent-subtitle-parser
 npm ci --ignore-scripts
 npm pack
 ```
@@ -166,8 +170,9 @@ are not included in Git or npm.
 Small reproductions, corrections to format interpretation, documentation and
 tests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for setup and expected
 evidence, and [Reporting bugs](docs/REPORTING.md) for the report checklist.
-The canonical public repository and reporting endpoints have not been announced
-yet; those guides explain how to prepare a report without inventing a destination.
+Use the [public source repository](https://github.com/saramkim/independent-subtitle-parser),
+[bug report form](https://github.com/saramkim/independent-subtitle-parser/issues/new?template=bug_report.yml)
+and [pull requests](https://github.com/saramkim/independent-subtitle-parser/pulls).
 
 During 0.x, review the [changelog](CHANGELOG.md) when upgrading and pin the
 version you have validated. New diagnostics and recovery behavior can affect

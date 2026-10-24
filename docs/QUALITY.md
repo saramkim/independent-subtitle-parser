@@ -20,7 +20,7 @@ receive fresh artifact checks. Historical results are labeled separately.
 | Performance/memory | Isolated real-file and synthetic command-stream observations, correct cue counts, GC and RSS reporting; additional metadata costs memory and RSS is not bounded by V8 old-space alone |
 | Consumers | Windows Node 20.20.2 and 24.18.0: 412 tests each; Chromium 156: 16 scenarios; actual tarball imports/declarations/examples/links/byte identity checked |
 | Unexecuted targets | Current Firefox, Node 22, Linux, macOS and hosted CI remain NOT RUN. Older Firefox evidence is specifically 0.1.5 |
-| Publication | MIT and provenance documented; private:true retained; repository/reporting metadata, hosted CI and authorized publication still pending |
+| Publication | MIT and provenance documented; public GitHub repository/reporting metadata connected; private:true retained; verified hosted CI and authorized npm publication still pending |
 
 See [latest corpus details](CORPUS-017.md) and [earlier corpus methodology](CORPUS.md)
 for sources, dimensions, exclusions and reproduction. Local frozen reports are

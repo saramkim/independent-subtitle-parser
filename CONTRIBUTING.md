@@ -4,12 +4,12 @@ Contributions can improve parsing, independent test expectations, documentation
 or consumer examples. Keep changes focused on the documented extraction profile.
 Please explain the input that fails and the behavior your change establishes.
 
-The public repository and issue/PR endpoints have not been announced for this
-pre-release candidate. Until they are available, prepare a local patch or report
-and use only a maintainer contact already verified through the distribution
-channel. This document does not advertise an active support inbox or promise a
-response time. Once the canonical repository is published, use its Issues and
-Pull requests tabs. See [Reporting bugs](docs/REPORTING.md).
+The canonical repository is
+[saramkim/independent-subtitle-parser](https://github.com/saramkim/independent-subtitle-parser).
+Use [Issues](https://github.com/saramkim/independent-subtitle-parser/issues) for
+reports and proposals. Fork the repository, make a focused branch, then open a
+[pull request](https://github.com/saramkim/independent-subtitle-parser/pulls)
+against `main`. See [Reporting bugs](docs/REPORTING.md). No response time is promised.
 
 ## Set up a source checkout
 
@@ -76,6 +76,6 @@ of commits. Original code contributions are provided under the project's
 Describe the problem, independent expected behavior, final change and checks
 actually run. Mention API/diagnostic changes and known limitations. Update the
 changelog and user-facing documentation when behavior changes. Use the prepared
-PR template once the public repository is available. Publishing a package or
+PR template when opening a pull request. Publishing a package or
 changing release credentials is a separate maintainer action, not a contribution
 requirement. Be respectful and keep disagreements tied to reproducible evidence.

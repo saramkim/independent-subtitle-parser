@@ -72,7 +72,9 @@ local snapshots, not reconstructed commits. Source, tests, documentation, lockfi
 licensed corpus and independent research harnesses are tracked. Generated dist,
 tarballs, local evidence, caches and historical product-comparison copies are not.
 The original archives remain unchanged. Git does not provide an off-device backup
-until a remote is separately authorized and configured.
+unless those commits have been pushed. The canonical `origin` is
+`https://github.com/saramkim/independent-subtitle-parser.git`; ignored local
+evidence and caches are not backed up by pushing the repository.
 
 `.gitattributes` disables automatic newline conversion for exact byte retention,
 including mixed-newline/BOM fixtures checked against upstream hashes. Preserve

@@ -6,11 +6,12 @@ than a screenshot of a player, because rendering may be outside this parser.
 
 ## Where to report
 
-This candidate has no announced canonical public repository or reporting inbox.
-Prepare the report below and use only an existing verified maintainer contact;
-do not send files to a guessed address. Once a public repository is announced,
-use its Issues tab and the prepared Bug report form. A release must link that
-repository from its package metadata and README before directing users there.
+Search [existing issues](https://github.com/saramkim/independent-subtitle-parser/issues)
+first, then use the
+[Bug report form](https://github.com/saramkim/independent-subtitle-parser/issues/new?template=bug_report.yml).
+The canonical repository is
+[saramkim/independent-subtitle-parser](https://github.com/saramkim/independent-subtitle-parser).
+The outline below also works for a report prepared offline.
 
 For a suspected security vulnerability, do not post secrets or an exploit against
 a live service in a public issue. Use the repository's private vulnerability

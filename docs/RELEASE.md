@@ -10,16 +10,16 @@ and successful validation are not registry publication or hosted CI results.
 | --- | --- |
 | Runtime and API | 0.1.7 extraction profile documented; latest bounded results in CORPUS-017.md |
 | Public documentation | README, contribution/reporting guides, MIT license and third-party notices included |
-| Repository participation | Bug report form and PR template prepared locally; not deployed to GitHub |
+| Repository participation | Bug report form and PR template are tracked in the public source repository |
 | Package verification | Actual tarball install, imports, declarations, examples, local document links, byte identity and reproducible packing |
-| Source repository and reporting endpoints | Not configured; no repository/homepage/bugs URLs invented |
+| Source repository and reporting endpoints | [saramkim/independent-subtitle-parser](https://github.com/saramkim/independent-subtitle-parser); repository/homepage/bugs metadata connected |
 | Hosted CI | Nine Node 20/22/24 × Windows/Linux/macOS jobs prepared; NOT RUN |
 | Current browser matrix | Windows Chromium 156 tested; Firefox/Safari and other OS combinations not revalidated for 0.1.7 |
 | Registry and account | Availability, maintainer identity and publishing permissions must be verified at release time |
 | Publication | Not authorized or performed as part of preparation; private:true remains |
 
-A public repository/reporting destination and hosted CI are remaining release
-steps, not silently waived checks. No new parser feature is implied by these
+A public repository/reporting destination is configured; hosted CI still requires
+verified runs on the published source revision. No new parser feature is implied by these
 remaining steps. A first 0.x release must describe its tested scope rather than
 claim complete subtitle or renderer conformance.
 
@@ -49,11 +49,10 @@ harnesses and redistributable fixtures.
 
 ## Before an authorized public release
 
-1. Obtain authorization for the intended public repository/owner and remote
-   creation or push. Publish the reviewed source and set verified `repository`,
-   `homepage` and `bugs.url` package metadata. Link the canonical issue/PR routes
-   in README, CONTRIBUTING and REPORTING; remove their temporary destination
-   notices. Confirm whether private vulnerability reporting is available before
+1. Verify the source revision in the public repository and the configured
+   `repository`, `homepage` and `bugs.url` metadata. Check the canonical issue/PR
+   routes in README, CONTRIBUTING and REPORTING. Confirm whether private
+   vulnerability reporting is available before
    advertising it. Do not invent an email address or response SLA.
 2. Run the prepared hosted CI matrix on the exact source revision. Resolve
    failures and record any deliberately unsupported environment explicitly.
@@ -80,8 +79,8 @@ harnesses and redistributable fixtures.
    artifact and README afterwards. Do not claim provenance without a configured
    and verified build/publishing system.
 
-Current preparation does not change npm authentication, create a remote, push,
-publish, deploy or integrate either product. Removing `private`, changing
+Publishing the GitHub source does not publish to npm or authorize npm credentials,
+deployment or product integration. Removing `private`, changing
 metadata or editing docs changes package bytes: old tarball hashes do not apply.
 
 ## Evidence and additional checks

@@ -5,6 +5,14 @@
   "description": "Independent, dependency-free subtitle parsing for browsers and Node.js",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saramkim/independent-subtitle-parser.git"
+  },
+  "homepage": "https://github.com/saramkim/independent-subtitle-parser#readme",
+  "bugs": {
+    "url": "https://github.com/saramkim/independent-subtitle-parser/issues"
+  },
   "keywords": ["subtitle", "srt", "webvtt", "sami", "ass", "ssa", "parser", "typescript"],
   "sideEffects": false,
   "engines": {
