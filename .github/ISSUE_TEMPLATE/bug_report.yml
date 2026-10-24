@@ -1,0 +1,59 @@
+name: Bug report
+description: Report incorrect parsing, information loss, crashes or excessive resource use.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share a small reproduction you have permission to publish. Do not upload private captions, full copyrighted transcripts, secrets or personal data.
+        For sensitive vulnerability details, use a verified private maintainer channel or GitHub private reporting if enabled, not this public form.
+        See CONTRIBUTING.md and docs/REPORTING.md in the repository for the support profile and reporting guidance.
+  - type: input
+    id: version
+    attributes:
+      label: Package version and installation source
+      description: Include the npm version, candidate tarball hash or Git commit as appropriate.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Runtime and operating system
+      description: Node or browser version, OS, and bundler if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal input and reproduction steps
+      description: Include the API call and options. For decoding issues, provide tiny byte/hex data, encoding and BOM. Preserve meaningful whitespace and newline spelling.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and diagnostics
+      description: Include status, relevant cues/tracks/fields, decode and parse diagnostic codes, and diagnosticsTruncated.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and its basis
+      description: Cite a specification or explain the source structure or consumer requirement. Another parser is comparison evidence, not automatically the answer.
+    validations:
+      required: true
+  - type: textarea
+    id: performance
+    attributes:
+      label: Performance measurements, if relevant
+      description: Input size, cue count, limits, repetitions, warmup, latency and memory method (heap versus RSS); state whether the output was verified.
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Sample provenance and sharing permission
+      description: Say whether the sample is self-authored. For external samples, provide provenance and the redistribution basis; avoid uploading material with unclear rights.
+    validations:
+      required: true

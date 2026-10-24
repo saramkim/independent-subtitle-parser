@@ -7,6 +7,21 @@ import assert from 'node:assert/strict';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const npmCli = process.env.npm_execpath;
 if (!npmCli) throw new Error('Run via npm run check:package.');
+const args = process.argv.slice(2);
+assert.ok(args.length === 0 || args.length === 1 && args[0] === '--release', 'Use check:package or check:release');
+const release = args[0] === '--release';
+const sourceManifest = JSON.parse(readFileSync(resolve(root, 'package.json')));
+if (release) {
+  assert.ok(sourceManifest.private === false || sourceManifest.private === undefined, 'Release check requires an explicitly prepared public manifest; private:true still blocks publication');
+  const repository = sourceManifest.repository;
+  assert.ok(repository && repository.type === 'git', 'Public manifest requires repository.type=git');
+  for (const [name, value] of Object.entries({ repository: repository.url, homepage: sourceManifest.homepage, bugs: sourceManifest.bugs?.url })) {
+    assert.equal(typeof value, 'string', `Public manifest requires ${name} URL`);
+    const url = new URL(name === 'repository' ? value.replace(/^git\+/, '') : value);
+    assert.equal(url.protocol, 'https:', `${name} must use HTTPS`);
+    assert.ok(!url.username && !url.password, `${name} must not contain credentials`);
+  }
+} else assert.equal(sourceManifest.private, true, 'Preparation check expects private:true; use check:release for a prepared public manifest');
 const run = (bin, args, cwd = root) => {
   const result = spawnSync(bin, args, { cwd, encoding: 'utf8', timeout: 60_000, windowsHide: true });
   if (result.error || result.status !== 0) throw new Error(result.error?.message ?? result.stderr ?? result.stdout);
@@ -21,10 +36,11 @@ const files = packed[0].files.map(f => f.path);
 assert.ok(files.includes('dist/index.js') && files.includes('dist/index.d.ts'));
 assert.ok(files.includes('THIRD_PARTY_NOTICES.md'));
 assert.ok(files.includes('LICENSE'));
+assert.ok(files.includes('CONTRIBUTING.md') && files.includes('docs/REPORTING.md'));
 for (const name of ['node.mjs', 'browser.html', 'browser.mjs', 'workflow.mjs', 'parse-worker.mjs', 'worker-client.mjs', 'serve.mjs']) assert.ok(files.includes('examples/' + name));
 for (const name of ['API', 'USAGE', 'DIAGNOSTICS', 'DEVELOPMENT']) assert.ok(files.includes('docs/' + name + '.md'));
 assert.ok(files.every(f => !['test/', 'node_modules/', 'evidence/', 'research/', 'corpus/', '.runtime-cache/'].some(prefix => f.startsWith(prefix))));
-assert.ok(files.every(f => /^(dist\/[\w/-]+\.(js|d\.ts)|examples\/[\w-]+\.(mjs|html)|docs\/[\w-]+\.md|README\.md|CHANGELOG\.md|LICENSE|THIRD_PARTY_NOTICES\.md|package\.json)$/.test(f)), 'Unexpected pack entry');
+assert.ok(files.every(f => /^(dist\/[\w/-]+\.(js|d\.ts)|examples\/[\w-]+\.(mjs|html)|docs\/[\w-]+\.md|README\.md|CONTRIBUTING\.md|CHANGELOG\.md|LICENSE|THIRD_PARTY_NOTICES\.md|package\.json)$/.test(f)), 'Unexpected pack entry');
 const digest = (bytes, algorithm = 'sha256', encoding = 'hex') => createHash(algorithm).update(bytes).digest(encoding);
 const tarballBytes = readFileSync(tarball);
 assert.equal(digest(tarballBytes, 'sha1'), packed[0].shasum);
@@ -96,8 +112,8 @@ void end; void truncated;`);
 run(process.execPath, [resolve(root, 'node_modules/typescript/bin/tsc'), '--noEmit', '--strict', '--target', 'ES2022', '--module', 'NodeNext', '--moduleResolution', 'NodeNext', 'consumer.ts'], consumer);
 run(process.execPath, [resolve(root, 'node_modules/typescript/bin/tsc'), '--noEmit', '--strict', '--target', 'ES2022', '--module', 'ESNext', '--moduleResolution', 'Bundler', 'consumer.ts'], consumer);
 const manifest = JSON.parse(readFileSync(resolve(consumer, 'node_modules/independent-subtitle-parser/package.json')));
-assert.equal(manifest.private, true);
+assert.deepEqual(manifest, sourceManifest);
 assert.equal(manifest.license, 'MIT');
 assert.match(readFileSync(resolve(installed, 'LICENSE'), 'utf8'), /^MIT License/);
 assert.equal(Object.keys(manifest.dependencies ?? {}).length, 0);
-console.log(JSON.stringify({ check: 'package-smoke', status: 'PASS', node: process.version, tarball, consumer, ...artifact, packageBytes: packed[0].size, unpackedBytes: packed[0].unpackedSize, files: files.length, checks: ['installed ESM import', 'CommonJS dynamic import', 'installed Node example', 'README and usage TypeScript recipes', 'installed Markdown link targets', 'TypeScript NodeNext declarations', 'TypeScript Bundler declarations', 'publish guard', 'runtime dependency count', 'strict pack allowlist', 'MIT license and third-party notice', 'actual archive/source/installed byte identity', 'repeat pack reproducibility'] }, null, 2));
+console.log(JSON.stringify({ check: 'package-smoke', mode: release ? 'release' : 'preparation', status: 'PASS', node: process.version, tarball, consumer, ...artifact, packageBytes: packed[0].size, unpackedBytes: packed[0].unpackedSize, files: files.length, checks: ['installed ESM import', 'CommonJS dynamic import', 'installed Node example', 'README and usage TypeScript recipes', 'installed Markdown link targets', 'TypeScript NodeNext declarations', 'TypeScript Bundler declarations', release ? 'public metadata syntax (remote availability not verified)' : 'publish guard', 'runtime dependency count', 'strict pack allowlist', 'MIT license and third-party notice', 'actual archive/source/installed byte identity', 'repeat pack reproducibility'] }, null, 2));

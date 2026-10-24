@@ -19,7 +19,7 @@ for (let parent = dirname(output); parent !== evidenceRoot; parent = dirname(par
 // Exclusive creation prevents overwriting either phase-one or later frozen runs.
 mkdirSync(dirname(output), { recursive: true });
 mkdirSync(output);
-const inputs = ['src', 'test', 'scripts', 'examples', 'docs', 'corpus', 'research/quality-013', 'research/release-015', 'research/corpus-016', 'research/corpus-017', '.github', '.gitattributes', 'LICENSE', 'CHANGELOG.md', 'README.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'tsconfig.json', 'entities.reference.json', '.gitignore', 'research/reference-parsers/package.json', 'research/reference-parsers/package-lock.json', 'research/reference-parsers/probe.mjs', 'research/reference-parsers/fixtures.mjs'];
+const inputs = ['src', 'test', 'scripts', 'examples', 'docs', 'corpus', 'research/quality-013', 'research/release-015', 'research/corpus-016', 'research/corpus-017', '.github', '.gitattributes', 'LICENSE', 'CHANGELOG.md', 'README.md', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'tsconfig.json', 'entities.reference.json', '.gitignore', 'research/reference-parsers/package.json', 'research/reference-parsers/package-lock.json', 'research/reference-parsers/probe.mjs', 'research/reference-parsers/fixtures.mjs'];
 function files(path) {
   try { return readdirSync(path, { withFileTypes: true }).filter(entry => entry.name !== 'node_modules').flatMap(entry => entry.isDirectory() ? files(resolve(path, entry.name)) : [resolve(path, entry.name)]); }
   catch (error) { if (error.code === 'ENOTDIR') return [path]; throw error; }
@@ -41,10 +41,11 @@ const git = gitHead.status === 0 ? {
 } : null;
 const tests = files(resolve(root, 'test')).filter(path => path.endsWith('.test.mjs')).sort();
 if (!tests.length) throw Error('No tests discovered.');
+const packageCheck = JSON.parse(readFileSync(resolve(root, 'package.json'))).private === true ? 'check:package' : 'check:release';
 const commands = [
   ['build', process.execPath, [npmCli, 'run', 'build']],
   ['test', process.execPath, ['--test', '--test-reporter=tap', ...tests]],
-  ['package', process.execPath, [npmCli, 'run', 'check:package']],
+  ['package', process.execPath, [npmCli, 'run', packageCheck]],
   ['node-example', process.execPath, ['examples/node.mjs']],
   ['benchmark', process.execPath, ['scripts/benchmark.mjs']],
 ];

@@ -1,136 +1,185 @@
 # Independent Subtitle Parser
 
-Read **SRT, WebVTT, SAMI/SMI and ASS/SSA** with one TypeScript API in browsers and
-Node.js. No runtime dependencies, DOM, storage, network access or renderer inside
-the library. It preserves source text and reports recovery and unsupported data.
+Parse **SRT, WebVTT, SAMI/SMI and ASS/SSA** with one TypeScript API in browsers
+and Node.js. Extract timed text and language tracks while keeping the source,
+raw markup and diagnostics available for inspection.
 
-**0.1.7 is an unpublished local candidate.** The owner selected this package name
-and the [MIT license](LICENSE). `private: true` still prevents publication;
-an actual release requires separate authorization.
+- **One data model:** millisecond timestamps, readable text, tracks and metadata.
+- **Explicit recovery:** malformed input, omitted data and unsupported presentation
+  produce diagnostics instead of silently disappearing.
+- **Portable core:** no runtime dependencies, DOM, storage, network access or renderer.
 
-## Install this candidate
+Use it for subtitle import, inspection, search and text-based playback workflows.
+For styled ASS playback, use a dedicated renderer alongside the preserved source.
 
-Use the supplied local tarball, not the public npm registry:
+## Install
+
+**0.1.7 is a pre-release candidate and is not published to npm yet.** Install a
+supplied candidate tarball in your application:
 
 ```sh
-npm install /absolute/path/to/independent-subtitle-parser-0.1.7.tgz
+npm install ./independent-subtitle-parser-0.1.7.tgz
 ```
 
-Node.js 20+; ESM with TypeScript declarations. CommonJS callers can use
-`await import('independent-subtitle-parser')`; synchronous `require()` is not supported.
-Browser consumers need ES2022, and `TextDecoder` when decoding bytes.
+To build that tarball from a source checkout:
 
-## Parse text
+```sh
+npm ci --ignore-scripts
+npm pack
+```
+
+Node.js **20+**; ESM with TypeScript declarations. CommonJS callers use dynamic
+`import()`; synchronous `require()` is not a supported export. Browser consumers
+need ES2022, and `TextDecoder` when decoding bytes. Import the package root through
+your application's module/bundler setup; the examples also run without a bundler.
+
+## Quick start
 
 ```ts
 import { parse } from 'independent-subtitle-parser';
 
-const result = parse('1\n00:00:01,250 --> 00:00:03,000\n안녕하세요\nHello');
+const source = '1\n00:00:01,250 --> 00:00:03,000\n안녕하세요\nHello';
+const result = parse(source);
+
 if (result.status === 'fatal') {
-  console.error(result.diagnostics); // no cues are returned
+  console.error(result.diagnostics); // no cues, tracks or metadata returned
 } else {
-  console.log(result.cues[0]?.text); // 안녕하세요\nHello
-  console.log(result.cues[0]?.start); // 1250 milliseconds
-  console.log(result.diagnostics); // inspect partial results too
+  console.log(result.cues[0]?.start); // 1250 (milliseconds)
+  console.log(result.cues[0]?.end);   // 3000
+  console.log(result.cues[0]?.text);  // 안녕하세요\nHello
+  console.log(result.diagnostics);   // inspect partial results too
 }
 ```
 
-- `ok`: no warning/error in the supported extraction profile; not full conformance.
-- `partial`: usable data may exist alongside recovery, omitted data or unsupported
-  presentation. Inspect diagnostic codes; do not automatically discard the result.
-- `fatal`: no cues/tracks/metadata; retain diagnostics and source for inspection.
-- `end: null`: the input provides no reliable end. Keep it unknown until your
-  application has an explicit playback policy. Do not replace it with zero.
+`parse` detects the format from content. If the format is already known, pass
+`parse(source, { format: 'sami' })`; `.smi` files use the `sami` option.
+`detectFormat(source)` exposes the detection result without parsing cues.
 
-`text` is readable text; `rawText` retains cue markup; `sourceText` is the exact
-string passed to `parse`. Render as text, never `innerHTML`. No sorting,
-deduplication, language guessing or subtitle rendering happens automatically.
+## Supported formats
 
-## Read bytes from a file
+| Format | Extracted and preserved | Important limits |
+| --- | --- | --- |
+| SRT | Times, IDs, multiline text and raw markup; diagnosed recovery of common malformed syntax | No universal SRT standard or styling renderer; ambiguous damage can remain unrecovered |
+| WebVTT | Times, IDs, cue settings, text/voice/language markup and NOTE/STYLE/REGION metadata | No browser layout/CSS engine; HLS timestamp mapping is retained but not applied |
+| SAMI/SMI | SYNC times, class/language tracks, clear events, BR/PRE and legacy authoring-command metadata | Final end can be unknown; no full HTML/CSS layout, Source panel or command execution |
+| ASS/SSA | Dialogue, centisecond times, event fields, styles/comments, raw overrides and a reading-text projection | No fonts, positioning, drawings or karaoke rendering; declared Timer scaling is not applied |
 
-Decoding and parsing are separate. `decode` defaults to UTF-8 or a UTF-8/UTF-16
-BOM; it does **not** detect legacy encodings. On invalid bytes it returns
-`text: null`. Supply the encoding you know, such as `euc-kr`.
+See the [complete support profile](docs/API.md) for recovery rules and unsupported
+syntax. Source order, overlaps and duplicates are retained. The library does not
+sort cues, infer languages, merge tracks or choose a playback track for you.
+
+## Work with results
+
+| Value | Meaning |
+| --- | --- |
+| `status: 'ok'` | No warning/error in the supported extraction profile; not a full conformance certificate |
+| `status: 'partial'` | Usable data may coexist with recovery, omitted data or unsupported presentation; inspect diagnostics |
+| `status: 'fatal'` | No cues/tracks/metadata; diagnostics and source remain available |
+| `end: null` | No reliable end is known; your application must choose an explicit playback policy |
+
+`text` is a reading projection. `rawText` retains cue markup with LF-normalized
+line endings. `sourceText` is the exact string passed to `parse`. Keep original
+bytes separately for byte-perfect archival. Render output as text, never raw
+`innerHTML`. A warning about unapplied styling does not necessarily mean that a
+caption was lost. The [diagnostic guide](docs/DIAGNOSTICS.md) explains decisions.
+
+For multilingual subtitles, inspect `result.tracks`, let the caller choose a
+track ID, then filter `result.cues` by `cue.trackId`.
+[Track-selection recipes](docs/USAGE.md) cover missing language metadata and
+unknown end times.
+
+## Decode file bytes
+
+Decoding is separate from parsing. `decode` defaults to UTF-8 or a UTF-8/UTF-16
+BOM; it does **not** guess legacy encodings. Supply a known encoding such as
+`euc-kr`. Invalid byte sequences fail by default.
 
 ```ts
 import { decode, parse } from 'independent-subtitle-parser';
 
-function readSubtitle(bytes: Uint8Array) {
-  const decoded = decode(bytes); // or { encoding: 'euc-kr' }
+function readSubtitle(bytes: Uint8Array, encoding?: string) {
+  const decoded = decode(bytes, { encoding });
   const parsed = decoded.text === null ? null : parse(decoded.text);
-  return {
-    encoding: decoded.encoding,
-    decodeDiagnostics: decoded.diagnostics,
-    parsed,
-    diagnostics: [
-      ...decoded.diagnostics.map(d => ({ ...d, stage: 'decode' as const })),
-      ...(parsed?.diagnostics ?? []).map(d => ({ ...d, stage: 'parse' as const })),
-    ],
-  };
+  return { decoded, parsed }; // retain diagnostics from both stages
 }
+
 // Browser: readSubtitle(new Uint8Array(await file.arrayBuffer()))
 // Node: readSubtitle(await readFile(path)) from node:fs/promises
+// Legacy encoding: readSubtitle(bytes, 'euc-kr')
 ```
 
-Check file size **before** reading it. The examples below enforce a 16 MiB file
-limit; parser budgets also apply to the decoded string. Keep the original bytes
-if byte-perfect archival matters. Replacement decoding (`fatal: false`) must be
-an explicit choice and its warning must not be lost even when parsing is `ok`.
+Check file size **before** reading it. Default decoding accepts up to 16 MiB;
+parsing has separate string, line, cue and diagnostic budgets. Replacement
+decoding (`fatal: false`) is an explicit lossy choice: retain its warning even
+when parsing succeeds. Invalid API options throw `TypeError` or `RangeError`;
+file-content problems return diagnostics. Catch host I/O errors separately.
+
+The API is synchronous and reads a whole document. Large results and JSON export
+consume memory. For untrusted files or responsive UI, use lower
+[resource budgets](docs/API.md) and a host-managed Worker/process with a deadline.
 
 ## Try a real file
 
-The tarball includes runnable consumer examples. Paths below assume npm installed
-the package in this project's `node_modules`.
+The package includes runnable examples. From an application with the package
+installed:
 
 ```sh
-# All stages and the full result are written as JSON to stdout.
 node node_modules/independent-subtitle-parser/examples/node.mjs ./movie.srt
 node node_modules/independent-subtitle-parser/examples/node.mjs ./movie.smi euc-kr sami
-
-# Serve the interactive browser example locally. Open the printed URL.
 node node_modules/independent-subtitle-parser/examples/serve.mjs
 ```
 
-The browser example offers file, encoding and format selection, per-track cue
-preview, diagnostics, raw/source previews and full-result JSON download. It runs
-file reading and parsing in a disposable module Worker with cancel and a
-10-second example deadline. File contents are not uploaded or stored. Preview
-limits are labeled and do not truncate the retained result. Track lists use
-100-item pages with shortened labels; every track remains selectable. Source order and
-unknown end times stay intact. Serve over HTTP; opening the HTML as `file:` will
-not reliably load modules/workers.
+The Node example writes the complete result as JSON. The server prints a local
+URL for the browser example, which provides file/encoding/format selection,
+track previews, diagnostics, JSON download and a cancellable module Worker.
+File contents are not uploaded or stored. Preview limits do not truncate the
+retained parse result. Serve over HTTP; `file:` does not reliably load modules.
 
-For a source checkout, run `npm ci --ignore-scripts` and `npm run build`, then
-`node examples/node.mjs` or `node examples/serve.mjs`. No-argument Node execution
-uses a small built-in SRT. [More recipes](docs/USAGE.md) cover track selection,
-Worker lifetime, CLI exits, bundlers and CommonJS.
+In a source checkout, run `npm run build`, then `node examples/node.mjs` or
+`node examples/serve.mjs`. See [consumer recipes](docs/USAGE.md) for CommonJS,
+bundlers, Worker lifetime and CLI exit codes.
 
-## Choose format and handle problems
+## Validation and compatibility
 
-`parse(text, { format: 'sami' })` explicitly selects a parser. Use `sami` for `.smi`
-files. Without `format`, detection uses content, not the filename. Ambiguous or
-unknown content fails with a diagnostic; do not retry formats until something
-looks successful. `detectFormat(text)` exposes candidates and confidence.
+The 0.1.7 runtime passed 412 tests on Windows Node 20.20.2 and 24.18.0, plus 16
+Chromium 156 consumer scenarios. Package checks install the actual tarball and
+check imports, TypeScript declarations, examples and archive byte identity.
+The current runtime has not been revalidated on Firefox, Node 22, Linux or macOS;
+the prepared hosted CI matrix has not run. Supported targets and tested targets
+are different claims.
 
-[Diagnostic guide](docs/DIAGNOSTICS.md) explains decoding failures, recovery,
-omitted cues, presentation limits and resource budgets. File-content problems
-return diagnostics; invalid API options throw `TypeError` or `RangeError`.
-Catch host I/O/Worker errors separately.
+The latest corpus expansion checked 23,889 events in seven real ASS/SSA files
+for timing, raw text and fields; reading text was scored on a restricted 5,107
+events. Three legacy SAMI files were checked separately. A ten-minute seeded
+campaign completed 3,655,680 mutations and 456,960 arithmetic cases, with another
+896 mutations on full-size original files. These are bounded checks, not proof
+of perfection, full rendering conformance or superiority over every parser.
 
-## Reference and scope
+Reproduce the standard checks in a source checkout with `npm run validate`.
+[Corpus methodology](docs/CORPUS.md), [the latest evaluation](docs/CORPUS-017.md)
+and [quality criteria](docs/QUALITY.md) explain sources, licenses, comparisons,
+unscored cases and reproduction commands. Historical local evidence archives
+are not included in Git or npm.
 
-- [API, types, resource budgets and format support](docs/API.md)
-- [Usage recipes and runnable examples](docs/USAGE.md)
-- [Diagnostics and recovery decisions](docs/DIAGNOSTICS.md)
-- [Changes](CHANGELOG.md), [design](docs/DESIGN.md), [public sources](docs/SOURCES.md)
-- [Corpus and comparison methodology](docs/CORPUS.md), [quality gates](docs/QUALITY.md)
-- [Large ASS/SSA files and legacy SAMI command validation](docs/CORPUS-017.md)
-- [Development and local evidence](docs/DEVELOPMENT.md), [third-party notices](THIRD_PARTY_NOTICES.md)
-- [Publication preparation and remaining gates](docs/RELEASE.md)
+## Contribute and report bugs
 
-Full ASS rendering, serialization, streaming and automatic charset guessing are
-outside the current scope. The API is synchronous and whole-document; host
-Workers/processes provide cancellation. Large structured results and JSON export
-still consume memory. This candidate is not a claim of universal correctness or
-superiority over other parsers. The two Chinese damaged SRT cases and real
-ASS/SSA/SAMI corpus gaps remain documented in the quality evidence.
+Small reproductions, corrections to format interpretation, documentation and
+tests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for setup and expected
+evidence, and [Reporting bugs](docs/REPORTING.md) for the report checklist.
+The canonical public repository and reporting endpoints have not been announced
+yet; those guides explain how to prepare a report without inventing a destination.
+
+During 0.x, review the [changelog](CHANGELOG.md) when upgrading and pin the
+version you have validated. New diagnostics and recovery behavior can affect
+consumer decisions. Full rendering, serialization, streaming and automatic
+charset guessing remain outside this package's current scope.
+
+## License and documentation
+
+Original package code is licensed under [MIT](LICENSE). Third-party reference
+data retains its own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
+- [API reference](docs/API.md) and [diagnostic guide](docs/DIAGNOSTICS.md)
+- [Usage recipes](docs/USAGE.md) and [development guide](docs/DEVELOPMENT.md)
+- [Design](docs/DESIGN.md), [public format sources](docs/SOURCES.md) and [changelog](CHANGELOG.md)
+- [Release checklist for maintainers](docs/RELEASE.md)

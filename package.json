@@ -22,6 +22,7 @@
     "dist",
     "examples",
     "README.md",
+    "CONTRIBUTING.md",
     "THIRD_PARTY_NOTICES.md",
     "LICENSE",
     "docs",
@@ -33,6 +34,7 @@
     "test": "npm run build && node scripts/test.mjs",
     "bench": "npm run build && node scripts/benchmark.mjs",
     "check:package": "npm run build && node scripts/package-smoke.mjs",
+    "check:release": "npm run build && node scripts/package-smoke.mjs --release",
     "prepack": "npm run build"
   },
   "devDependencies": {

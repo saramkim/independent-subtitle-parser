@@ -1,6 +1,9 @@
 # Development and local evidence
 
-The current [ASS/SSA/SAMI corpus workflow](CORPUS-016.md) includes optional local
+Start with [CONTRIBUTING.md](../CONTRIBUTING.md) for patch and fixture expectations
+and [Reporting bugs](REPORTING.md) for minimal reproductions.
+
+The current [ASS/SSA/SAMI corpus workflow](CORPUS-017.md) includes optional local
 downloads, independent oracles, comparison and expanded fuzzing. Local transcripts
 stay excluded from Git/npm. `scripts/validate.mjs` fingerprints the new research
 scripts as well as the runtime, tests and public corpus.
@@ -31,6 +34,10 @@ directory and rejects overwrites. In PowerShell use `npm.cmd` if the `npm.ps1`
 wrapper consumes the argument separator. Validation records hashes, tests, build,
 package checks, the Node example and a routine benchmark. In a Git checkout it
 also records HEAD and initial dirty state; archives report Git as unavailable.
+Validation selects `check:package` for a private candidate and `check:release`
+for a public manifest. Both install/test the real tarball; the release check
+requires public repository/homepage/bug URLs but does not publish or contact a
+registry to prove those URLs or account permissions. See [release gates](RELEASE.md).
 A prior run's performance
 numbers, browser observations and fuzz campaign are not automatically new proof.
 
@@ -51,6 +58,9 @@ Local records (not tarball paths):
 - `evidence/usability-014-final/REPORT.md` — 0.1.4 consumer examples and Pro review.
 - `evidence/release-015-final/REPORT.md` — 0.1.5 packaging, Firefox, expanded corpus
   and the one-hour mutation campaign.
+- `evidence/corpus-016-final/REPORT.md` — 0.1.6 corpus and parser improvements.
+- `evidence/corpus-017-final/REPORT.md` — 0.1.7 runtime, real large ASS/SSA and
+  legacy SAMI command validation; subsequent documentation packaging has its own record.
 
 These historical records are local archives, not files delivered by Git clone.
 Fresh runs recreate evidence from the tracked tests and research harnesses.

@@ -2,6 +2,9 @@
 
 ## 0.1.7 — legacy SAMI commands and large real ASS/SSA validation, unpublished
 
+- Prepare public-facing README, contribution/reporting guides and GitHub issue/PR
+  templates. Include contribution/reporting guides in the package. Add a separate
+  release package check; the current candidate retains `private: true`.
 - Retain observed `SpanID`, `ShowImg` and `DisplayImg` authoring commands as opaque
   `sami-legacy-command` metadata; exclude complete commands from reading text so
   they cannot create phantom captions or prevent NBSP clears. Warn once with
