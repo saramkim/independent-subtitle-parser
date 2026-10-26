@@ -1,6 +1,6 @@
 {
   "name": "independent-subtitle-parser",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Independent, dependency-free subtitle parsing for browsers and Node.js",
   "type": "module",
   "license": "MIT",
@@ -12,7 +12,16 @@
   "bugs": {
     "url": "https://github.com/saramkim/independent-subtitle-parser/issues"
   },
-  "keywords": ["subtitle", "srt", "webvtt", "sami", "ass", "ssa", "parser", "typescript"],
+  "keywords": [
+    "subtitle",
+    "srt",
+    "webvtt",
+    "sami",
+    "ass",
+    "ssa",
+    "parser",
+    "typescript"
+  ],
   "sideEffects": false,
   "engines": {
     "node": ">=20"

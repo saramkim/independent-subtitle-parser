@@ -25,7 +25,7 @@ npm install independent-subtitle-parser
 For an unpublished release candidate, install the supplied tarball instead:
 
 ```sh
-npm install ./independent-subtitle-parser-0.1.7.tgz
+npm install ./independent-subtitle-parser-0.1.8.tgz
 ```
 
 To build that tarball from a source checkout:
@@ -64,11 +64,11 @@ if (result.status === 'fatal') {
 `parse(source, { format: 'sami' })`; `.smi` files use the `sami` option.
 `detectFormat(source)` exposes the detection result without parsing cues.
 
-In the unreleased source version, callers that know an input is headerless WebVTT
+Starting with 0.1.8, callers that know an input is headerless WebVTT
 can opt in with `parse(source, { format: 'vtt', recoverMissingVttHeader: true })`.
 Successful recovery returns `partial` with a `VTT_HEADER_RECOVERED` warning while
 preserving the original source and line numbers. Default parsing and automatic
-detection are unchanged. See [recovery boundaries](docs/API.md#optional-missing-webvtt-header-recovery-unreleased).
+detection are unchanged. See [recovery boundaries](docs/API.md#optional-missing-webvtt-header-recovery-since-018).
 
 ## Supported formats
 

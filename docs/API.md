@@ -44,7 +44,7 @@ between SRT recovery and headerless VTT: auto mode fails; supply the known forma
 Explicit VTT requires `WEBVTT` by default. Embedded signature-like text, long preambles
 and conflicting dialects can defeat heuristics; use explicit format when known.
 
-### Optional missing WebVTT header recovery (unreleased)
+### Optional missing WebVTT header recovery (since 0.1.8)
 
 `parse(text, { format: 'vtt', recoverMissingVttHeader: true })` permits a missing
 header as a library extension, not a WebVTT-standard recovery. The boolean option

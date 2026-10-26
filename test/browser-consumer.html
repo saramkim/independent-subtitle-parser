@@ -12,6 +12,11 @@ const wait = async (condition, label) => {
   while (!condition()) { if (performance.now() > until) throw Error('Timed out: ' + label); await new Promise(r => setTimeout(r, 20)); }
 };
 try {
+  const headerless = '\uFEFF00:01.000 --> 00:02.000\r\nHello';
+  const recovered = parse(headerless, {format:'vtt', recoverMissingVttHeader:true});
+  assert(recovered.status==='partial' && recovered.sourceText===headerless && recovered.cues[0]?.source.line===1 && recovered.cues[0]?.source.endLine===2 && recovered.diagnostics.some(d=>d.code==='VTT_HEADER_RECOVERED'),'VTT header recovery provenance');
+  assert(parse(headerless, {format:'vtt'}).status==='fatal' && parse(headerless, {recoverMissingVttHeader:true}).status==='fatal','VTT opt-in boundary');
+  checks.push('explicit VTT missing-header recovery, provenance and unchanged default/detection');
   const ass = parse('[Events]\nFormat: Start, End, Text\nDialogue: 1:2:3.04,1:2:4.05,hello', {format:'ass'});
   assert(ass.cues[0]?.start===3723040 && ass.cues[0]?.end===3724050 && ass.diagnostics.some(d=>d.code==='ASS_TIME_WIDTH_RECOVERED'),'unpadded ASS clocks');
   checks.push('ASS unpadded minute/second recovery and diagnostic');

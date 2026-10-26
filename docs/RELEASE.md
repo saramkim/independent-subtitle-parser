@@ -1,11 +1,11 @@
 # Release preparation
 
 This checklist is for maintainers of `independent-subtitle-parser`. The current
-0.1.7 candidate has a public manifest prepared for release; npm publication is
+0.1.8 candidate has a public manifest prepared for release; npm publication is
 still pending account authentication and approval of the exact artifact. Local preparation
 and successful validation are not registry publication or hosted CI results.
 
-## Readiness snapshot
+## Historical 0.1.7 readiness snapshot
 
 | Area | State |
 | --- | --- |

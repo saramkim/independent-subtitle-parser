@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.8 — optional WebVTT header recovery
 
 - Add `recoverMissingVttHeader`, effective only with explicit `format: 'vtt'`.
   Parse headerless cue bodies with a recovery warning and `partial` status,
