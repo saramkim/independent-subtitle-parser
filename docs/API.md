@@ -7,7 +7,7 @@ types. Times are **nonnegative safe integer milliseconds**, never seconds.
 
 | API | Result / behavior |
 | --- | --- |
-| `parse(text, { format?, limits? })` | `ParseResult`, content errors reported as diagnostics. Options choose `srt`, `vtt`, `sami`, `ass`, `ssa`; `.smi` maps to the `sami` option. |
+| `parse(text, { format?, limits?, recoverMissingVttHeader? })` | `ParseResult`, content errors reported as diagnostics. Options choose `srt`, `vtt`, `sami`, `ass`, `ssa`; `.smi` maps to the `sami` option. |
 | `detectFormat(text)` | `{ format, confidence, candidates }`; bounded content heuristic, no filename guessing. |
 | `decode(bytes, { encoding?, fatal?, maxBytes? })` | `{ text, encoding, bom, diagnostics }`; text is `null` on fatal decoding failure. |
 | `DEFAULT_LIMITS` | Frozen default parsing budgets. |
@@ -41,8 +41,32 @@ Detection examines at most **65,536 UTF-16 code units**. WEBVTT/SAMI signatures,
 ASS/SSA headers and comma SRT timings provide signals. Partial ASS/SAMI fragments
 can give low confidence and a warning. Headerless dot timings are ambiguous
 between SRT recovery and headerless VTT: auto mode fails; supply the known format.
-Explicit VTT still requires `WEBVTT`. Embedded signature-like text, long preambles
+Explicit VTT requires `WEBVTT` by default. Embedded signature-like text, long preambles
 and conflicting dialects can defeat heuristics; use explicit format when known.
+
+### Optional missing WebVTT header recovery (unreleased)
+
+`parse(text, { format: 'vtt', recoverMissingVttHeader: true })` permits a missing
+header as a library extension, not a WebVTT-standard recovery. The boolean option
+defaults to false and has no effect without explicit `format: 'vtt'`; automatic
+detection and other formats are unchanged. Non-boolean values throw `TypeError`.
+
+Recovery parses the original body using existing WebVTT cue rules, including IDs,
+settings and NOTE/STYLE/REGION blocks. Leading empty lines are allowed. A usable
+cue (an accepted interval, even with empty payload) is required; otherwise the
+result is fatal with `VTT_SIGNATURE` and no cues/tracks/metadata. Unrecognized
+content before the first usable cue is rejected, not discarded as a preamble.
+A first nonempty line starting with `WEBVTT` case-insensitively is reserved for
+signature handling: malformed or misplaced signatures are not repaired or used
+as cue IDs. An arbitrary line immediately before timing can still be a cue ID;
+the parser cannot infer the author's intent.
+
+The attempt emits one `VTT_HEADER_RECOVERED` warning at line 1; successful recovery
+is always `partial`. Existing diagnostic caps/priorities apply, so a higher-severity
+diagnostic can displace this warning with `diagnosticsTruncated: true`. `sourceText`
+is unchanged (including BOM/newlines), and cue, metadata and diagnostic line numbers
+refer to the original input. No synthetic `vtt-header` metadata is added. Normal
+headers retain their existing behavior. Resource limits still apply.
 
 `decode` uses the platform WHATWG `TextDecoder`; it does not guess charset from
 language or retry encodings until one appears to work. BOM and an explicit label

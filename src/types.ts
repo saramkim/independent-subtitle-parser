@@ -46,6 +46,8 @@ export interface Limits {
 export interface ParseOptions {
   /** Omit to detect. A format is an explicit choice, not a filename hint. */
   format?: SubtitleFormat;
+  /** Opt in to missing-header recovery only with explicit format: 'vtt'. Default false. */
+  recoverMissingVttHeader?: boolean;
   limits?: Partial<Limits>;
 }
 export interface Detection {
