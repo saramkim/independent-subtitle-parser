@@ -25,7 +25,7 @@ function validateSettings(settings: string, ctx: ParseContext, line: number): vo
   }
 }
 
-export function parseTimed(lines: string[], ctx: ParseContext): void {
+export function parseTimed(lines: string[], ctx: ParseContext, recoverMissingVttHeader = false): void {
   const vtt = ctx.format === 'vtt';
   const hasArrow = (value: string | undefined): boolean => value !== undefined &&
     (value.includes('-->') || (!vtt && value.includes('->')));
@@ -33,8 +33,15 @@ export function parseTimed(lines: string[], ctx: ParseContext): void {
   let i = 0;
   let previousStart = -1;
   const identifiers = new Set<string>();
-  if (vtt) {
-    if (!/^WEBVTT(?:[ \t]|$)/.test(lines[0] ?? '') || lines[0]!.includes('-->')) ctx.fatal('VTT_SIGNATURE', 'WebVTT requires a WEBVTT signature at the beginning.', 1);
+  const missingHeader = vtt && (!/^WEBVTT(?:[ \t]|$)/.test(lines[0] ?? '') || lines[0]!.includes('-->'));
+  if (missingHeader) {
+    // A damaged signature is not a missing signature. Never rewrite the input
+    // or insert synthetic lines/metadata to enter the body parser.
+    const firstContent = lines.find(line => line !== '') ?? '';
+    if (!recoverMissingVttHeader || /^WEBVTT/i.test(firstContent)) ctx.fatal('VTT_SIGNATURE', 'WebVTT requires a WEBVTT signature at the beginning.', 1);
+    ctx.diagnostic('VTT_HEADER_RECOVERED', 'warning', 'Parsing without a WEBVTT header by explicit request; original source and line numbers are retained.', 1);
+  }
+  if (vtt && !missingHeader) {
     const header: string[] = [lines[0]!];
     i = 1;
     while (i < lines.length && lines[i] !== '') {
@@ -72,6 +79,7 @@ export function parseTimed(lines: string[], ctx: ParseContext): void {
     const endPunctuation = !vtt && timing !== null && /^\d+:\d{2}:\d{2},\d{3}\.$/.test(timing[3]!);
     const end = vtt ? (recovered ? recoveredVttTime(recovered[5]!) : null) : (timing ? srtTime(endPunctuation ? timing[3]!.slice(0, -1) : timing[3]!) : null);
     if (start === null || end === null) {
+      if (missingHeader && ctx.cues.length === 0) ctx.fatal('VTT_SIGNATURE', 'Missing-header recovery requires a cue or a recognized WebVTT block, not an arbitrary preamble.', timingLine + 1);
       ctx.diagnostic('INVALID_TIMING', 'error', 'Unrecognized timing or orphan content; preserved in sourceText.', timingLine + 1);
       // Skip damaged block, but resynchronize at another timing or identifier+timing.
       i++;
@@ -122,4 +130,5 @@ export function parseTimed(lines: string[], ctx: ParseContext): void {
       previousStart = start;
     }
   }
+  if (missingHeader && ctx.cues.length === 0) ctx.fatal('VTT_SIGNATURE', 'Missing-header recovery requires at least one usable WebVTT cue.', 1);
 }

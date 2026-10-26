@@ -64,6 +64,12 @@ if (result.status === 'fatal') {
 `parse(source, { format: 'sami' })`; `.smi` files use the `sami` option.
 `detectFormat(source)` exposes the detection result without parsing cues.
 
+In the unreleased source version, callers that know an input is headerless WebVTT
+can opt in with `parse(source, { format: 'vtt', recoverMissingVttHeader: true })`.
+Successful recovery returns `partial` with a `VTT_HEADER_RECOVERED` warning while
+preserving the original source and line numbers. Default parsing and automatic
+detection are unchanged. See [recovery boundaries](docs/API.md#optional-missing-webvtt-header-recovery-unreleased).
+
 ## Supported formats
 
 | Format | Extracted and preserved | Important limits |

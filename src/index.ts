@@ -16,6 +16,7 @@ const formats: readonly SubtitleFormat[] = ['srt', 'vtt', 'sami', 'ass', 'ssa'];
 export function parse(sourceText: string, options: ParseOptions = {}): ParseResult {
   if (typeof sourceText !== 'string') throw new TypeError('parse expects a decoded string. Use decode for bytes.');
   if (options.format !== undefined && !formats.includes(options.format)) throw new TypeError('Unknown subtitle format option.');
+  if (options.recoverMissingVttHeader !== undefined && typeof options.recoverMissingVttHeader !== 'boolean') throw new TypeError('recoverMissingVttHeader must be a boolean.');
   const limits: Limits = { ...DEFAULT_LIMITS, ...options.limits };
   for (const key of Object.keys(DEFAULT_LIMITS) as (keyof Limits)[]) {
     if (!Number.isSafeInteger(limits[key]) || limits[key] < 1) throw new RangeError(`${key} must be a positive safe integer.`);
@@ -47,7 +48,7 @@ export function parse(sourceText: string, options: ParseOptions = {}): ParseResu
     const lines = normalized.split('\n');
     if (format === 'ass' || format === 'ssa') parseAss(lines, ctx);
     else if (format === 'sami') parseSami(lines, ctx);
-    else parseTimed(lines, ctx);
+    else parseTimed(lines, ctx, options.format === 'vtt' && options.recoverMissingVttHeader === true);
     return ctx.result(sourceText);
   } catch (error) {
     if (error instanceof ParseAbort) return ctx.result(sourceText, true);

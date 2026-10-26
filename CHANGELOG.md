@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Add `recoverMissingVttHeader`, effective only with explicit `format: 'vtt'`.
+  Parse headerless cue bodies with a recovery warning and `partial` status,
+  preserving exact source and original line numbers without synthetic metadata.
+  Require at least one usable cue; retain default signature checks, automatic
+  detection and resource limits. Add recovery boundary and provenance tests.
+
 ## 0.1.7 — legacy SAMI commands and large real ASS/SSA validation, unpublished
 
 - Connect the public GitHub source repository, issue/PR routes and npm repository
